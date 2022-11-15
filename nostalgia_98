@@ -1,0 +1,692 @@
+<!DOCTYPE HTML>
+<head> 
+<!--
+
+// Nostalgia 98 v1.0 
+// by France La'Lune & Emoticon Equinox
+
+
+// Thanks for using my work
+// Please don't remove the credit
+// Please don't redistribute
+// Feel free to share my work to support me!
+// Please have fun and enjoy using this!
+
+
+// Questions, comments, concerns? 
+// Visit shenanigans.neocities.org/district/contact
+// Or go to the blog linked in the credit
+
+
+// Photo script by sadthemes on Tumblr
+// 98.css script found here github.com/jdan/98.css
+
+-->
+
+
+
+            <!-- -- image -- -->
+    <meta name="image:favicon" content="">
+    <meta name="image:cursor" content="">
+ 
+    <meta name="image:background" content="">
+    
+    <meta name="image:icon" content="">
+    <meta name="image:links icon" content="">
+    
+    <meta name="image:link 1" content="">
+    <meta name="image:link 2" content="">
+    <meta name="image:link 3" content="">
+    <meta name="image:link 4" content="">
+    <meta name="image:link 5" content="">
+        
+    <meta name="image:music" content="">
+        
+        
+        
+            <!-- -- text -- -->
+    <meta name="text:text size" content="16">
+    <meta name="text:name" content="">
+    <meta name="text:description" content="">
+        
+    <meta name="text:link 1" content="One">
+    <meta name="text:link 2" content="Two">
+    <meta name="text:link 3" content="Three">
+    <meta name="text:link 1 url" content="/">
+    <meta name="text:link 2 url" content="/">
+    <meta name="text:link 3 url" content="/">
+        
+    <meta name="text:song title" content="">
+    <meta name="text:song artist" content="">
+    <meta name="text:song url" content="https://files.catbox.moe/w57jfk.mp3">
+       
+       
+        
+            <!-- -- color -- -->
+    <meta name="color:background" content="">
+    <meta name="color:text" content="">
+    <meta name="color:text select" content="">
+    <meta name="color:text select bg" content="">
+        
+    <meta name="color:link" content="">
+    <meta name="color:link hover" content="">
+        
+    <meta name="color:link glow" content="">
+    <meta name="color:link glow hover" content="">        
+        
+    <meta name="color:title gradient" content="">    
+    <meta name="color:title gradient 2" content="">  
+        
+        
+        
+            <!-- -- opt -- -->
+    <meta name="if:custom cursor" content="">
+    <meta name="if:full background" content="">
+    <meta name="if:link glow" content="">
+    <meta name="if:bold links" content="">
+    <meta name="if:heart icon" content="">
+    <meta name="if:circle icon" content="">
+        
+ 
+            <!-- -- scripts -- -->
+            
+    <link rel="shortcut icon" href="{image:favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}"> 
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+    <title>{Title}</title>
+        
+
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    
+
+
+    <style type="text/css">
+
+
+/* ------------------------------------------------ */
+
+    body{
+    background-image:Url('{image:background}');
+    background-color:{color:background};
+    {block:ifcustomcursor}
+    cursor:url("{image:cursor}"), default;
+    {/block:ifcustomcursor}
+    background-attachment:fixed;
+    {block:iffullbackground} 
+    background-size: cover;
+    {/block:iffullbackground}
+    color:{color:text};
+    word-wrap:break-word;}    
+    
+    a{
+    {block:ifboldlinks}
+    font-weight:bold;
+    {/block:ifboldlinks}
+    text-decoration:none;  
+    text-shadow: 0 0 10px {color:link glow}; 0 0 10px;
+    color:{color:link};}
+    
+    a:hover{
+    text-decoration:underline;
+    text-shadow: 0 0 10px {color:link glow hover}; 0 0 10px;
+    color:{color:link hover};}
+    
+    ::selection{ 
+    color:{color:text select}; 
+    background-color:{color:text select bg};}
+    
+    .npf_row{
+    margin: 0 !important;}
+ 
+    blockquote{
+    border-left:2px dashed {color:text};
+    padding-left:10px;
+    margin: 15px;}
+ 
+    p{
+    margin:0 0 5px 0;
+    padding:0;}
+
+
+/* ------------------------------------------------ */
+
+    #content, .navi{
+    margin-left:705px;
+    width:450px;}
+    
+    .post, .navi{
+    overflow:hidden;}
+    
+    .post img {
+    max-width:100%;
+    height:auto;}
+    
+    
+/* ------------------------------------------------ */
+
+    #sidebar{
+    position:fixed;
+    margin-top:20px;
+    margin-left:115px;}
+
+    #description{
+    padding:5px;}
+    
+    #song{
+    margin-top:255px;
+    position:fixed;
+    margin-left:285px;}
+    
+    .sidebar img{
+    {block:ifhearticon}
+    -webkit-mask-image:url(https://64.media.tumblr.com/530d6f82ba12efe719853b50499b1d5d/b58a88777157fa9c-6e/s500x750/69a0aa24e15c4c98f2b7ce62f6c00544e0b3a1c3.png);
+    -webkit-mask-repeat:no-repeat;
+    -webkit-mask-size:cover;
+    {/block:ifhearticon}
+    {block:ifcircleicon}
+    border-radius:100%;
+    {/block:ifcircleicon};}
+
+
+/* ------------------------------------------------ */
+
+
+    #link-container{
+    width:85px;
+    text-align:center;
+    font-family:Pixelated MS Sans Serif;
+    font-size:13px;
+    left:0px;
+    top:0px;
+    position:fixed;
+    padding:5px;}
+    
+    .link-1{
+    margin:0 0 15px 0;}
+    
+    .link-2{
+    margin:0 0 15px 0;}
+    
+    .link-3{
+    margin:0 0 15px 0;}
+    
+    .link-4{
+    margin:0 0 15px 0;}  
+
+    
+/* ------------------------------------------------ */
+
+
+    #pop{
+    position:fixed;
+    margin-left:125px;
+    margin-top:225px;}
+
+
+/* ------------------------------------------------ */
+
+
+    .title{
+    font-weight:bold;
+    font-size:25px;}
+
+
+/* ------------------------------------------------ */
+
+
+    .window-body{
+    font-size:{text:text size}px;}
+    
+    .tree-view{
+    font-size:{text:text size}px;        
+    text-align:center;
+    overflow-x:hidden;
+    overflow-y:auto;
+    max-height:120px;}
+    
+    .title-bar{
+    background-image: linear-gradient(to top left, {color:title gradient}, {color:title gradient 2});}
+
+
+/* ------------------------------------------------ */
+  
+    
+    .button{
+    background:transparent;
+    border-radius:5px;
+    padding:5px;}
+ 
+    .button:hover{
+    cursor:help;}
+
+
+/* ------------------------------------------------ */
+
+
+    .footer{
+    text-align:center;    
+    padding:10px;}
+    
+    ol.notes{
+    list-style-type:none;
+    padding:3px;
+    overflow:auto;}
+    
+    .notes{
+    text-align:left;}
+
+
+{CustomCss}
+</style>
+</head>
+<body>
+
+<!------------------------------------------------------------------->
+
+<div id="sidebar">
+    <div class="window" style="width: 400px">
+        <div class="title-bar">
+            <div class="title-bar-text">{text:name}'s Information</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="width:200px">
+                                <div class="sidebar img"><a href="/"><img style='max-height:100%; height: 165px; width:200px; max-width:100%; object-fit:cover;display:block' src="{image:icon}"></a>
+                                </div>
+                            </td>
+                            <td style="width:200px">
+                                <div id="description">
+                                    <ul class="tree-view" style="    font-size:{text:text size}px; height:150px; max-height:150px;">
+                                        {text:description}
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>    
+
+<!------------------------------------------------------------------->
+
+<div id="song">
+    <div class="window" style="width: 300px">
+        <div class="title-bar">
+            <div class="title-bar-text">{text:song title} - Windows Media Player</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+        <div class="window-body">
+            <img src="{image:music}" style="width:100%; height:auto; max-height:175px;padding-bottom:5px;">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+<audio id="music" src="{text:song url}"></audio>
+<button style="margin:5px 0 5px 0; width:50px;margin-top:-5px;font-size:18px" onclick="playpause()"><div class="button" style="font-size:13px;">Play</div></button>
+<script>
+	let player = document.getElementById("music"); //the audio id
+    let btn = document.getElementById("btn"); //the button id
+    isPlaying = false; //set to false because it is not playing yet
+ 
+    function playpause() {
+        if (!isPlaying) play(); //if isPlaying is false, then play the music
+        else pause(); //if isPlaying is true, then pause the music
+    }
+ 
+    function play(){
+        player.play(); //play the music
+        isPlaying = true; //set to true because the music is playing
+        btn.innerHTML = "pause"; //change the button to say pause
+    }
+ 
+    function pause(){
+        player.pause(); //pause the music
+        isPlaying = false; //set to false because the music is not playing
+        btn.innerHTML = "play"; //change the button to say play
+    }
+ 
+    player.onended = function(){
+        isPlaying = false; //the song has ended, isPlaying is false
+        btn.innerHTML = "play"; //change the button to say play
+    }
+</script>
+                            </td>
+                            <td>
+                                <div class="field-row" style="max-width: 300px">
+                                    <label>Volume:</label>
+                                        <label>Low</label>
+                                        <input type="range" min="1" max="11" value="5" />
+                                    <label>High</label>
+                                </div>                            
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>    
+                    <ul class="tree-view" style="    font-size:{text:text size}px;">
+                        Song: {text:song title}
+                        <hr style="width:100%; margin-bottom:-5px;">
+                        <br>Artist: {text:song artist}
+                    </ul>               
+        </div>
+    </div>    
+</div>
+
+<!------------------------------------------------------------------->
+
+<div id="link-container">
+
+    <div class="link-1">
+        <a href="/">
+            <img src="{image:link 1}" style="width:50px;max-width:50px;">
+            <br>Home
+        </a>
+    </div>
+
+    <div class="link-2">
+        <a href="/ask">
+            <img src="{image:link 2}" style="width:50px;max-width:50px;">
+            <br>{AskLabel}
+        </a>
+    </div>
+
+    <div class="link-3">
+        <a href="/archive">
+            <img src="{image:link 3}" style="width:50px;max-width:50px;">
+            <br>{lang:Archive}
+        </a>
+    </div>    
+    
+    <div class="link-4">
+        <a href="https://cloverparty.tumblr.com/tagged/mine">
+            <img src="{image:link 4}" style="width:50px;max-width:50px;">
+            <br>Theme credit
+        </a>
+    </div>    
+    
+    <div class="toggle">
+            <input type="image" style="width:50px;max-width:50px;" src="{image:link 5}" onclick="toggle(this)">
+            <br><a href="/">Click me</a>
+    </div>
+    
+</div>
+
+<!------------------------------------------------------------------->
+
+<div id="pop">
+    <div style="padding:5px; display:none;" id="cont">
+        <div class="window" style="width: 250px">
+            <div class="title-bar">
+                <div class="title-bar-text">{text:name}'s Links</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <center>
+                <img src="{image:links icon}" style="width:100%;max-width:250px;height:auto;margin:0 0 5px 0">
+                    <br><button><a href="{text:link 1 url}">{text:link 1}</a></button>
+                    <button><a href="{text:link 2 url}">{text:link 2}</a></button>
+                    <button><a href="{text:link 3 url}">{text:link 3}</a></button>
+                </center>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------------------------------------------------------------->
+
+<div id="content">
+    {block:Posts} 
+    <br>
+    <div class="window" style="width: 450px">
+        <div class="title-bar">
+            <div class="title-bar-text">{text:name}'s Posts</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+
+            <!--{block:NoRebloggedFrom}{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}{/block:NoRebloggedFrom} --> {block:ContentSource}<!-- {SourceURL}{block:SourceLogo}<img src="{BlackLogoURL}"width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}
+{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo}-->
+{/block:ContentSource}
+
+                <div class="post">
+                    <div class="posts" post-type="{PostType}">
+
+
+            <!-- -- -- Images -- -- -->
+            
+    {block:Photo}
+        {LinkOpenTag}
+            <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+        {LinkCloseTag}
+        {block:Caption}
+            {Caption}
+        {/block:Caption}
+    {/block:Photo}
+    {block:Photoset}
+            <div class="media">{Photoset}</div>
+        {block:Caption}
+            <div class="caption">
+                {Caption}
+            </div>
+        {/block:Caption}
+    {/block:Photoset}
+    
+            <!-- -- -- text, quotes, links -- -- -->
+            
+    {block:Text}
+        {block:Title}
+            <div class="title">{Title}</div>
+        {/block:Title}
+            {Body}
+    {/block:Text}
+    
+    
+    {block:Chat}
+        {block:Title}
+            <div class="title">
+                <h3><a href="{Permalink}">{Title}</a></h3></div>
+        {/block:Title}
+        {block:Lines}
+            <div class="{Alt} user_{UserNumber}">
+        {block:Label}
+            <span class="label">{Label}</span>
+        {/block:Label}
+        {Line}
+            </div>
+        {/block:Lines}
+    {/block:Chat}
+    
+    
+    {block:Quote}
+        <div class="quote">
+            "{Quote}"
+            {block:Source}
+                <div class="source">
+                    - <i>{Source}</i>
+                </div>
+            {/block:Source}
+        </div>
+    {/block:Quote}    
+    
+    {block:Link}
+        <a href="{URL}" class="link" {Target}>{Name}</a>
+        {block:Description}
+            {Description}
+        {/block:Description}
+    {/block:Link}
+
+
+            <!-- -- -- audio & video -- -- -->
+            
+    {block:Video}
+        {Video-500}
+        {block:Caption}
+            {Caption}
+        {/block:Caption}
+    {/block:Video}
+    
+    {block:Audio}
+        <div id= "audioplayer">{AudioPlayerWhite}</div>
+    {block:AlbumArt}
+        <div id="albumart">
+            <img src="{AlbumArtURL}" width="100">  
+        </div>
+    {/block:AlbumArt}
+        <div class="trackstuff">
+            {block:TrackName}
+                <b><i>{TrackName}</i></b>
+            {/block:TrackName}
+            <br>{block:Artist}
+                <i>{Artist}</i>
+            {/block:Artist}
+        </div>
+        {Caption}
+    {/block:Audio}    
+    
+            <!-- -- -- asks -- -- -->
+            
+    {block:Answer}
+        <div class="question">
+            {Asker}: {Question}
+        </div>
+        <div class="caption">
+            {Answer}
+        </div>
+    {/block:Answer}    
+    
+    
+            <!-- -- -- asks -- -- -->
+    
+    {block:Date}
+        <div class="footer">
+            <a href="{Permalink}">
+                {block:NoteCount}
+                    {NoteCount}%
+                {/block:NoteCount}
+            </a>    
+
+            {block:HasTags}
+                <div class="tags">
+                    {block:Tags}
+                        #<a href="{TagURL}">{Tag}</a> 
+                    {/block:Tags}
+                </div>
+            {/block:HasTags} 
+                
+            {block:PermalinkPage}
+                <div class="notes">
+                    {block:PostNotes}
+                        {PostNotes}
+                    {/block:PostNotes}
+                </div>    
+            {/block:PermalinkPage}
+            <!--{block:NoRebloggedFrom}{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}{/block:NoRebloggedFrom} --> 
+        </div>
+    {/block:Date}
+     
+
+                    </div>
+                </div>
+            </div>            
+        </div>
+    {/block:Posts}
+</div>
+
+    <br>
+    <div class="navi" style="background-color:silver; box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;padding:5px;">
+        {block:Pagination}
+            <center>
+                {block:PreviousPage}
+                    <a href="{PreviousPage}">&#10094;</a> 
+                {/block:PreviousPage}
+                {block:JumpPagination length="3"}
+                {block:CurrentPage}
+                    <span class="current_page">{PageNumber}</span>
+                {/block:CurrentPage}
+                {block:JumpPage}
+                    <a class="jump_page" href="{URL}">{PageNumber}</a>
+                {/block:JumpPage}
+                {/block:JumpPagination}
+                {block:NextPage}
+                    <a href="{NextPage}">&#10095;</a>
+                {/block:NextPage}
+            </center>
+        {/block:Pagination}
+    </div>
+
+<!------------------------------------------------------------------->
+
+<script> 
+$( "#sidebar" ).draggable();
+</script>
+
+<script> 
+$( "#song" ).draggable();
+</script>
+
+<script> 
+$( ".link-1" ).draggable();
+</script>
+
+<script> 
+$( ".link-2" ).draggable();
+</script>
+
+<script> 
+$( ".link-3" ).draggable();
+</script>
+
+<script> 
+$( ".link-4" ).draggable();
+</script>
+
+<script> 
+$( ".toggle" ).draggable();
+</script>
+
+<script> 
+$( "#pop" ).draggable();
+</script>
+
+<script>
+    function toggle(ele) {
+        var cont = document.getElementById('cont');
+        if (cont.style.display == 'block') {
+            cont.style.display = 'none';
+ 
+            document.getElementById(ele.id).value = 'GO!';
+        }
+        else {
+            cont.style.display = 'block';
+            document.getElementById(ele.id).value = 'Bye';
+        }
+    }
+</script> 
+
+
+</body>
+</html>
