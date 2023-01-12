@@ -1,0 +1,591 @@
+<!DOCTYPE HTML>
+<head>
+<!-- HELLO YEAR 2000★ theme by emoticon equinox -->
+<!-- questions, comments, concerns? https://cloverparty.tumblr.com/ask -->
+<!-- go here for custom music player skins: https://skins.scmplayer.net/
+
+
+<!-- images -->
+<meta name="image:favicon" content="">
+<meta name="image:custom cursor" content="">
+<meta name="image:blog background" content="">
+<meta name="image:sidebar" content="">
+<meta name="image:sidebar background" content="">
+<meta name="image:content background" content="">
+<meta name="image:floatie" content=""> 
+<meta name="image:footer pixel" content="">
+<!-- end images -->
+
+<!-- color -->
+<meta name="color:blog background" content="">
+<meta name="color:sidebar background" content="">
+<meta name="color:content background" content="">
+<meta name="color:border color" content="#000000">
+<meta name="color:text" content="">
+<meta name="color:link" content="">
+<meta name="color:link hover" content="">
+<meta name="color:text selection" content="">
+<meta name="color:text selection bg" content="">
+
+<meta name="color:link border" content="">
+<meta name="color:link border hover" content="">
+
+<meta name="color:footer background" content="#ffffff">
+<meta name="color:footer text" content="">
+<meta name="color:footer link" content="">
+<meta name="color:footer link hover" content="">
+<meta name="color:footer link border" content="">
+<meta name="color:footer link border hover" content="">
+
+<meta name="color:table column 1" content="#ff8888">
+<meta name="color:table column 2" content="#fffa88">
+<meta name="color:table column 3" content="#a4ff88">
+<meta name="color:table column 1 link" content="#c30000">
+<meta name="color:table column 2 link" content="#ff9a00">
+<meta name="color:table column 3 link" content="#009d62">
+<meta name="color:table link border" content="">
+<!-- end color -->
+
+<!-- text -->
+<meta name="text:title" content="it must be good">
+<meta name="text:title size" content="25">
+<meta name="text:text size" content="18">
+<meta name="text:redirect path" content="/tagged/hello">
+<meta name="text:desc" content="^_^">
+<meta name="text:link one" content="link one">
+<meta name="text:link two" content="link two">
+<meta name="text:link three" content="link three">
+<meta name="text:link one url" content="/">
+<meta name="text:link two url" content="/">
+<meta name="text:link three url" content="/">
+<meta name="text:music player skin url" content="https://static.tumblr.com/y3igvfg/GeCm6tbkc/skinbytobesoperfect.css">
+<meta name="text:song title" content="Pikachu ~ Nya Nya">
+<meta name="text:song url" content="https://www.youtube.com/watch?v=GYCXZH3fMUk">
+<meta name="text:song title 2" content="Pikachu ~ Nya Nya">
+<meta name="text:song url 2" content="https://www.youtube.com/watch?v=GYCXZH3fMUk">
+<meta name="text:song title 3" content="Pikachu ~ Nya Nya">
+<meta name="text:song url 3" content="https://www.youtube.com/watch?v=GYCXZH3fMUk">
+<meta name="text:song title 4" content="Pikachu ~ Nya Nya">
+<meta name="text:song url 4" content="https://www.youtube.com/watch?v=GYCXZH3fMUk">
+<meta name="text:song title 5" content="Pikachu ~ Nya Nya">
+<meta name="text:song url 5" content="https://www.youtube.com/watch?v=GYCXZH3fMUk">
+
+<meta name="text:floatie size" content="100">
+<!-- end text -->
+
+<!-- footer alignment -->
+<meta name="select:footer alignment" content="right">
+<meta name="select:footer alignment" content="center">
+<meta name="select:footer alignment" content="left"> 
+<!-- end footer alignment -->
+
+<!-- font -->
+<meta name="select:font" content="arial">
+<meta name="select:font" content="short stack">
+<meta name="select:font" content="ms gothic">
+<meta name="select:font" content="roboto mono">
+<!-- end font -->
+
+<!-- border styles n' sizes --> 
+<meta name="select:border type" content="solid">
+<meta name="select:border type" content="double">
+<meta name="select:border type" content="dashed">
+<meta name="select:border type" content="dotted">
+<meta name="select:border size" content="1">
+<meta name="select:border size" content="2">
+<meta name="select:border size" content="3">
+<!-- end border styles -->
+
+<!-- options -->
+<meta name="if:custom cursor" content="">
+<meta name="if:circular icon" content="">
+<meta name="if:redirect">
+<meta name="if:pastel rainbow borders" content="">
+<meta name="if:bright rainbow borders" content="">
+<meta name="if:full background" content="">  
+<meta name="if:bold links" content="">  
+<meta name="if:music player" content="">
+<meta name="if:link underline" content="">  
+<!-- end options -->
+
+<!-- moosic -->
+<meta name="select:music player autoplay" content="false"/>
+<meta name="select:music player autoplay" content="true"/>
+<meta name="select:show music playlist by default" content="false"/>
+<meta name="select:show music playlist by default" content="true"/>
+<!-- end moosic -->
+
+<!-- misc -->  
+<link href="https://fonts.googleapis.com/css?family=Short+Stack&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}"> 
+<link rel="stylesheet" href="https://static.tumblr.com/qxrkgx6/RWPmgn2qa/normalize.min.css">
+{block:Description}
+<meta name="description" content="{MetaDescription}" />
+{/block:Description}
+<link rel="shortcut icon" href="{image:favicon}">
+<script type="text/javascript">
+// <![CDATA[
+var speed=100; // speed of wobbling, lower is faster
+var height=3; // height of wobbling in pixels
+var alink="http://www.mf2fm.com/rv"; // page to link text to (set to ="" for no link)
+
+/****************************
+*    Wobbly Text Effect     *
+*(c) 2003-6 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var wobtxt, wobble, wobcnt=0;
+window.onload=function() { if (document.getElementById) {
+  var i, wobli;
+  wobble=document.getElementById("wobble");
+  wobtxt=wobble.firstChild.nodeValue;
+  while (wobble.childNodes.length) wobble.removeChild(wobble.childNodes[0]);
+  for (i=0; i<wobtxt.length; i++) {
+    wobli=document.createElement("span");
+    wobli.setAttribute("id", "wobb"+i);
+    wobli.style.position="relative";
+    wobli.appendChild(document.createTextNode(wobtxt.charAt(i)));
+    if (alink) {
+      wobli.style.cursor="pointer";
+      wobli.onclick=function() { top.location.href=alink; }
+    }
+    wobble.appendChild(wobli);
+  }
+  setInterval("wobbler()", speed);
+}}
+
+function wobbler() {
+  for (var i=0; i<wobtxt.length; i++) document.getElementById("wobb"+i).style.top=Math.round(height*Math.sin(i+wobcnt))+"px"
+  wobcnt++;
+}
+// ]]>
+</script>
+{block:ifredirect}
+<script>
+if(window.location.pathname == '/') location.replace('{text:redirect path}');
+</script> 
+{block:ifredirect}
+<style type="text/css">
+
+/* basic appearance */
+/* basic customization options here, like text & link colors etc!! */
+body{
+word-wrap:break-word;
+font-size:{text:text size}px;
+font-family:{select:font};
+color:{color:text};
+background-color:{color:blog background};
+background-image:Url('{image:blog background}');
+background-attachment:fixed;
+{block:iffullbackground} 
+background-size: cover;
+{/block:iffullbackground}
+{block:ifcustomcursor}
+cursor:url("{image:custom cursor}"), default;
+{/block:ifcustomcursor};}
+::-webkit-scrollbar {
+width: 1px;
+height: 10px;}
+a{
+{block:ifcustomcursor}
+cursor:url("{image:custom cursor}"), default;
+{/block:ifcustomcursor};
+text-shadow: -1px 0  {color:link border}, 0 1px  {color:link border}, 1px 0  {color:link border}, 0 -1px  {color:link border};
+color:{color:link};
+{block:ifboldlinks}
+font-weight:bold;
+{/block:ifboldlinks}
+text-decoration:none;
+{block:iflinkunderline}
+text-decoration:underline;
+{/block:iflinkunderline};}
+a:hover{
+text-shadow: -1px 0  {color:link border hover}, 0 1px  {color:link border hover}, 1px 0  {color:link border hover}, 0 -1px  {color:link border hover};
+color:{color:link hover};
+{block:ifboldlinks}
+font-weight:bold;
+{/block:ifboldlinks}
+{block:iflinkunderline}
+text-decoration:underline;
+{/block:iflinkunderline};}
+::selection{ 
+color:{color:text selection}; 
+background-color:{color:text selection bg};}
+::-webkit-scrollbar {
+width: 15px;
+height: 10px;}
+::-webkit-scrollbar-thumb:vertical{
+background-color: #fff;
+background-image: url(https://i.imgur.com/Qtm9Z60.png);
+border-top: 1px solid #bdbdbd;
+border-left: 1px solid #bdbdbd;
+border-right: 1px solid black;
+border-bottom: 1px solid black;}
+::-webkit-scrollbar-track {
+background-color: #fff;
+background-image: url(https://i.imgur.com/IGXGYKz.png);}
+::-webkit-scrollbar-button:vertical:increment {
+background-image: url(https://i.imgur.com/WhC8iy3.png);
+width: 14px;
+height: 16px;
+border-top: 1px solid #bdbdbd;
+border-left: 1px solid #bdbdbd;
+border-right: 1px solid black;
+border-bottom: 1px solid black;}
+::-webkit-scrollbar-button:vertical:decrement {
+background-image: url(https://i.imgur.com/fQ18mrR.png);
+border-top: 1px solid #bdbdbd;
+border-left: 1px solid #bdbdbd;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+width: 14px;
+height: 16px;}
+.npf_row {
+margin: 0 !important;}
+blockquote{
+margin: 0;}
+/* --- basics end --- */
+
+
+/* posts */
+/* 'postcontainer' is the container holding the posts inside it, 'postcontent' is the size of the post, and 'post' is how the post looks */
+#postcontainer{
+left:350px;
+overflow:auto;
+position:absolute;
+padding:5px;
+overflow-x: hidden;
+overflow-y:auto;}
+#postcontent{
+width:450px;}
+#content{
+overflow:hidden;}
+.post, .naviga{
+margin:0 0 10px 0;
+overflow:hidden;
+padding:5px;
+border:{select:border size}px {select:border type} {color:border color};
+background-color:{color:content background};
+background-image:Url('{image:content background}');
+background-size: cover;
+{block:ifpastelrainbowborders}
+border: 3px solid transparent;
+border-image: linear-gradient(to bottom right, #95cadf 0%, #a9e79a 20%, #eedb57 40%, #f9a4b0 60%, #fd87c4 80%, #bf75cc 100%);
+border-image-slice: 1; 
+{/block:ifpastelrainbowborders};
+{block:ifbrightrainbowborders}
+border: 3px solid transparent;
+border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+border-image-slice: 1; 
+{/block:ifbrightrainbowborders};}
+/* --- posts end --- */
+
+/* sidebar */
+/* 'side' is what is holding the sidebar inside it, 'sidebar' will change the size of the sidebar, desc and links are there just to nicely space things out so everything isnt cramped together!! */
+#side{
+left:0px;
+width:275px;
+height:100%;
+overflow-y:scroll;
+overflow-x:hidden;
+padding:5px;
+border-right:{select:border size}px {select:border type} {color:border color};
+background-color:{color:sidebar background};
+background-image:Url('{image:sidebar background}');
+background-size: cover;
+position:fixed;}
+#tittle{
+margin:0 0 10px 0;
+text-align:center;
+font-size:15px;}
+#desc{
+margin:10px 0 0 0;
+display:block;}
+#links{
+margin:10px 0 0 0;
+display:block;
+text-align:center;}
+#table, th, td{ 
+width:240px;
+margin:10px 0 0 0;
+margin-left:-4px;
+border:2px outset white;
+background:transparent;}
+tr:nth-child(1){
+background-color:{color:table column 1};}
+tr:nth-child(1) a{
+color:{color:table column 1 link};
+text-shadow: -1px 0  {color:table link border}, 0 1px  {color:table link border}, 1px 0  {color:table link border}, 0 -1px  {color:table link border};}
+tr:nth-child(2){
+background-color:{color:table column 2};}
+tr:nth-child(2) a{
+color:{color:table column 2 link};
+text-shadow: -1px 0  {color:table link border}, 0 1px  {color:table link border}, 1px 0  {color:table link border}, 0 -1px  {color:table link border};}
+tr:nth-child(3){
+background-color:{color:table column 3};}
+tr:nth-child(3) a{
+color:{color:table column 3 link};
+text-shadow: -1px 0  {color:table link border}, 0 1px  {color:table link border}, 1px 0  {color:table link border}, 0 -1px  {color:table link border};}
+#tit{
+font-size:{text:title size}px;
+}
+/* --- sidebar end --- */
+
+/* content appearance */
+/* the way images, notes, and other assets will look */
+.post img{
+max-width:500px;
+height:100%;
+max-width:100%;}
+.sidebar img{
+{block:ifcircularicon}
+border-radius:100%;
+{/block:ifcircularicon}
+border-radius:5px;
+max-width:270px;
+max-width:100%;
+display:block;}
+.footer{
+padding:3px;
+border-radius:5px;
+background-color:{color:footer background};
+color:{color:footer text};
+text-align:{select:footer alignment};}
+.footer a{
+color:{color:footer link};
+text-shadow: -1px 0  {color:footer link border}, 0 1px  {color:footer link border}, 1px 0  {color:footer link border}, 0 -1px  {color:footer link border};}
+.footer a:hover{
+text-shadow: -1px 0  {color:footer link border hover}, 0 1px  {color:footer link border hover}, 1px 0  {color:footer link border hover}, 0 -1px  {color:footer link border hover};
+color:{color:footer link hover};}
+ol.notes{
+list-style-type:none;
+padding:3px;
+overflow:auto;}
+video{
+max-width: 100%;
+height: auto;}
+#audioplayer{ 
+width:30px;
+height:25px;
+overflow:hidden;
+position:absolute;
+margin-top:40px;
+margin-bottom:40px;
+margin-left:35px;
+border-radius: 40px;
+opacity: 0.7;}
+.trackstuff{
+overflow:auto;
+margin-left:110px;
+margin-top:-75px;  
+margin-bottom:50px;
+display:block;}
+.playbutton{
+margin-bottom:30px;
+margin-top:-60px;
+margin-left:35px;
+z-index:9;
+width:33px;
+height:30px;
+overflow:hidden;}
+/* --- appearance end --- */
+
+/* moar stuff */
+/* random things that you add to the theme, not necessary for the theme's function */
+#foatie{ 
+position:fixed;
+bottom:0px;
+right:0px;}
+#c{
+font-size:25px;
+position:fixed; 
+right:0px;
+bottom:0px;}
+/* --- more end --- */
+
+{CustomCss}
+</style>
+</head>
+<body>
+{block:ifmusicplayer}
+<!-- SCM Music Player https://www.scmplayer.net -->
+<script type="text/javascript" src="https://www.scmplayer.net/script.js" 
+data-config="{'skin':'{text:music player skin url}','volume':50,'autoplay':{select:music player autoplay},'shuffle':false,'repeat':1,'placement':'top','showplaylist':{select:show music playlist by default},'playlist':[{'title':'{text:song title}','url':'{text:song url}'},{'title':'{text:song title 2}','url':'{text:song url 2}'},{'title':'{text:song title 3}','url':'{text:song url 3}'},{'title':'{text:song title 4}','url':'{text:song url 4}'},{'title':'{text:song title 5}','url':'{text:song url 5}'}]}" ></script>
+<!-- SCM Music Player script end -->
+
+{/block:ifmusicplayer}
+
+<div id="side">
+<div id="sidebar">
+<div id="tit">
+<CENTER><div id="wobble">{text:title}</div></center>
+</div>
+<a href="/"><div class="sidebar img"><img style='height: 100%; width: 100%; object-fit: cover' src='{image:sidebar}'/></div></a>
+<center>
+<div id="table">
+<table>
+<tbody> 
+<tr>
+<td><a href="{text:link one url}">{text:link one}</a></td>
+</tr>
+<tr>
+<td><a href="{text:link two url}">{text:link two}</a></td>
+</tr>
+<tr>
+<td><a href="{text:link three url}">{text:link three}</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="desc">
+<center>{text:desc}</center>
+</div>
+</center>
+</div>
+<p>
+<div id="foatie">
+<img src="{image:floatie}" width="{text:floatie size}px">
+</div>
+</div>
+
+<div id="postcontainer">
+<div id="postcontent">
+<div id="content">
+{block:Posts} 
+<!--{block:NoRebloggedFrom}{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}{/block:NoRebloggedFrom} --> {block:ContentSource}<!-- {SourceURL}{block:SourceLogo}<img src="{BlackLogoURL}"width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}
+{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo} -->
+{/block:ContentSource}
+<div class="post">
+
+<!-- Text -->
+{block:Text}
+{block:Title}
+<div class="title">{Title}</div>
+{/block:Title}
+{Body}
+{/block:Text}
+{block:Chat}
+{block:Title}
+<div class="title">
+<h3><a href="{Permalink}">{Title}</a></h3></div>
+{/block:Title}
+{block:Lines}
+<div class="{Alt} user_{UserNumber}">
+{block:Label}
+<span class="label">{Label}</span>
+{/block:Label}{Line}
+</div>
+{/block:Lines}
+{/block:Chat}
+
+<!-- Images --->
+{block:Photo}
+{LinkOpenTag}
+<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+{LinkCloseTag}
+{block:Caption}
+{Caption}
+{/block:Caption}
+{/block:Photo}
+{block:Photoset}
+{Photoset-400}
+{block:Photos} 
+{/block:Photos}
+{block:Caption}
+{Caption}
+{/block:Caption}
+{/block:Photoset}
+
+<!-- Video -->
+{block:Video}
+{Video-500}
+{block:Caption}
+{Caption}
+{/block:Caption}
+{/block:Video}
+
+<!-- Audio -->
+{block:Audio}
+<div id= "audioplayer">{AudioPlayerWhite}</div>
+{block:AlbumArt}
+<div id="albumart">
+<img src="{AlbumArtURL}" width="100">  
+</div>
+{/block:AlbumArt}
+<div class="trackstuff">
+{block:TrackName}<b><i>{TrackName}</i></b>{/block:TrackName}<br>{block:Artist}<i>{Artist}</i>{/block:Artist}</div>
+{Caption}
+{/block:Audio}
+
+<!-- Quote -->
+{block:Quote}
+<div class="quote">
+"{Quote}"
+{block:Source}
+<div class="source">- <i>{Source}</i></div>
+{/block:Source}
+</div>
+{/block:Quote}
+
+<!-- Link -->
+{block:Link}
+<a href="{URL}" class="link" {Target}>{Name}</a>
+{block:Description}
+{Description}
+{/block:Description}
+{/block:Link}
+
+<!-- Ask --> 
+{block:Answer}
+<div class="question">{Asker}: {Question}</div>
+<div class="caption">{Answer}</div>
+{/block:Answer} 
+
+<!-- Footer -->
+{block:Date}
+<div class="footer">
+<a href="{Permalink}">{12Hour}:{Minutes} {AmPm}</a> <a href="{ReblogUrl}"><img src="{image:footer pixel}"></a>
+<br>{block:HasTags}
+{block:Tags}#<a href="{TagURL}">{Tag}</a> {/block:Tags}{/block:HasTags}
+{block:PermalinkPage}
+<br><a href="{Permalink}">{TimeAgo}</a>
+<a href="{Permalink}">{block:NoteCount} [{NoteCountWithLabel}] {/block:NoteCount}</a>
+{block:NoteCount}
+{block:PostNotes}{PostNotes}{/block:PostNotes}
+{/block:NoteCount}
+{/block:PermalinkPage}
+<!--{block:NoRebloggedFrom}{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}{/block:NoRebloggedFrom} --> 
+{/block:Date}
+</div>
+
+</div>
+{/block:Posts}
+
+{block:Pagination}
+<div class="naviga">
+<center>
+{block:PreviousPage}
+<a href="{PreviousPage}">&#171; Back?</a> 
+{/block:PreviousPage}
+{block:NextPage}
+ <a href="{NextPage}">Next? &#187;</a>
+{/block:NextPage}
+</div>
+</div>
+{/block:Pagination}
+
+</div>
+</div>
+</div>
+
+<!-- please do not edit link or remove -->
+<div id="c"><a href="https://cloverparty.tumblr.com/tagged/mine">ミ★</a></div>
+<!-- please do not edit link or remove -->
+
+</div>
+</body>
+</html>
