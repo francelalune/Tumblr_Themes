@@ -1,0 +1,552 @@
+<!DOCTYPE HTML>
+    <head>
+    <meta charset="utf-8" />
+    <!--  
+        
+        **************************************    
+                 Sidebar Base / Theme
+        **************************************
+
+              Created by Mochizuki Hajime
+
+          You can use this as a base code for 
+         your own themes, or just use it as is!
+
+
+                  Notes, resources
+
+        // If you decide to use as a base and 
+        redistrubite, you may change the credit 
+        link and symbol to whatever you want. 
+        (If not, please leave it in tact)
+        
+        // Credit if you use as a base is 
+        appreciated, but not required! 
+        (Feel free to tag me though)
+
+                      Credit
+                      
+        // glenthemes for photo script       
+
+
+    -->
+    
+
+    <!--. . . . . . . . . . . . . . . . -->
+    <!-- -- --- --TEXT OPTIONS-- --- -- -->
+    <meta name="text:font family" content="arial">
+    <meta name="text:text size" content="18">
+    
+    <meta name="text:description" content="">
+    
+    <meta name="text:link 1" content="1">
+    <meta name="text:link 2" content="2">
+    <meta name="text:link 3" content="3">
+    
+    <meta name="text:link 1 url" content="/">
+    <meta name="text:link 2 url" content="/">
+    <meta name="text:link 3 url" content="/">
+    
+    <meta name="text:link divider" content="/">
+    
+    <meta name="text:content border size" content="1">
+    <meta name="text:footer border size" content="1">
+    
+    <!--. . . . . . . . . . . . . . . .-->
+    <!-- -- --- --IMAGE OPTIONS-- --- -- -->    
+    <meta name="image:background" content="">
+    <meta name="image:favicon" content="">
+    <meta name="image:cursor" content="">
+    <meta name="image:sidebar" content="">
+
+    <!--. . . . . . . . . . . . . . . .-->
+    <!-- -- --- --COLOR OPTIONS-- --- -- -->
+    <meta name="color:background" content="">
+    <meta name="color:scrollbar" content="">
+    <meta name="color:scrollbar background" content="">
+    <meta name="color:text" content="">
+    <meta name="color:text selection" content="">
+    <meta name="color:text selection background" content=""> 
+    <meta name="color:link" content="">
+    <meta name="color:link hover" content="">
+    
+    <meta name="color:content" content="">
+    <meta name="color:content border" content="">
+    
+    <meta name="color:footer" content="">
+    <meta name="color:footer border" content="">
+
+    <!--. . . . . . . . . . . . . . . .-->
+    <!-- -- --- --USER OPTIONS-- --- -- -->
+    <meta name="if:full background" content="">
+    <meta name="if:fixed background" content="">
+    <meta name="if:bold links" content="">
+    <meta name="if:link underline" content="">
+    <meta name="if:custom cursor" content="">
+    
+    <meta name="select:content border style" content="solid">
+    <meta name="select:content border style" content="dotted">
+    <meta name="select:content border style" content="dashed">
+    <meta name="select:content border style" content="double">
+    <meta name="select:content border style" content="inset">
+    <meta name="select:content border style" content="outset">
+    
+    <meta name="select:footer border style" content="solid">
+    <meta name="select:footer border style" content="dotted">
+    <meta name="select:footer border style" content="dashed">
+    <meta name="select:footer border style" content="double">
+    <meta name="select:footer border style" content="inset">
+    <meta name="select:footer border style" content="outset">    
+    
+
+    <!--. . . . . . . . . . . . . . . . -->
+    <!-- -- --- --SCRIPTS / ETC-- --- -- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+    <link href="//glen-npf-2020.glitch.me/npf-override.css" rel="stylesheet">
+    <script src="//glen-npf-2020.glitch.me/npf-evenize.js"></script>     
+    
+    <link rel="shortcut icon" href="{image:favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}"> 
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+    <title>{Title}</title>
+    
+    <style type="text/css">
+
+
+    /*******************************
+    
+              DOCUMENT BODY
+    
+    *******************************/
+
+    body{
+        background-color:{color:background};
+        background-image:url('{image:background}');
+        font-size:{text:text size}px;
+        font-family:{text:font family};
+        color:{color:text};
+        word-wrap:break-word;
+        {block:iffullbackground} 
+        background-size: cover;
+        {/block:iffullbackground}
+        {block:iffixedbackground} 
+        background-attachment:fixed;
+        {/block:iffixedbackground}
+        {block:ifcustomcursor}
+        cursor:url("{image:cursor}"), default;
+        {/block:ifcustomcursor}
+    }
+    
+    /* . . . . . . . . . . . . . */
+    
+    a{
+        color:{color:link};
+        {block:ifboldlinks}
+        font-weight:bold;
+        {/block:ifboldlinks}
+        text-decoration:none;
+        {block:iflinkunderline}
+        text-decoration:underline;
+        {/block:iflinkunderline}
+    }
+    
+    /* . . . . . . . . . . . . . */
+
+    a:hover{
+        color:{color:link hover};
+    }
+    
+    /* . . . . . . . . . . . . . */
+    
+    .npf_row{
+        margin: 0 !important;
+    }
+
+    /* . . . . . . . . . . . . . */
+    
+    blockquote{
+        border-left:1px solid {color:text};
+        padding-left:10px;
+        margin: 15px;
+    }
+
+    /* . . . . . . . . . . . . . */
+    
+    p{
+        margin:0 0 5px 0;
+        padding:0;
+    }    
+
+    /* . . . . . . . . . . . . . */
+    
+    :root {
+        --NPF-Image-Spacing:4px;
+        --NPF-Bottom-Gap-From-Captions:1em;
+    }
+    
+    /* . . . . . . . . . . . . . */    
+    
+    ::selection{ 
+    color:{color:text selection}; 
+    background-color:{color:text selection background};}       
+    
+    /* . . . . . . . . . . . . . */    
+    
+     ::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;}
+ 
+     /* . . . . . . . . . . . . . */
+ 
+    ::-webkit-scrollbar-thumb:vertical{
+    background:{color:scrollbar};
+    border-top: 1px solid #bdbdbd;
+    border-left: 1px solid #bdbdbd;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;}
+    
+    /* . . . . . . . . . . . . . */    
+ 
+    ::-webkit-scrollbar-track {
+    background:{color:scrollbar background};}
+    
+    
+    /*******************************
+    
+             POSTS AND STYLE
+    
+    *******************************/    
+    
+    #content, .nav{
+        width:470px;
+        margin-left:400px;
+    }
+    
+    /* . . . . . . . . . . . . . */
+
+    .post, .nav{
+        margin:15px 0 15px 0;
+        border:1px solid;
+        width:450px;
+        border:{text:content border size}px {select:content border style} {color:content border};
+        background-color:{color:content};
+        padding:5px;
+    }    
+    
+    /* . . . . . . . . . . . . . */
+
+    .post img{
+        max-width:100%;
+        height:auto;} 
+    
+    /* . . . . . . . . . . . . . */    
+    
+    .footer{
+        padding:10px;
+        border:{text:footer border size}px {select:footer border style} {color:footer border};
+        background-color:{color:footer};
+        
+    }
+    
+    /* . . . . . . . . . . . . . */        
+    
+    .title{
+        font-weight:bold;
+        font-size:25px;
+    }
+
+    /* . . . . . . . . . . . . . */    
+    
+    .body{
+        margin:5px 0 5px 0;
+    }
+
+    /* . . . . . . . . . . . . . */    
+    
+    ol.notes{
+        list-style-type:none;
+        padding:3px;
+        overflow:auto;
+    }
+    
+    /* . . . . . . . . . . . . . */        
+
+    #audioplayer{ 
+        width:30px; 
+        height:25px; 
+        overflow:hidden; 
+        position:absolute; 
+        margin-top:40px; 
+        margin-bottom:40px; 
+        margin-left:35px; 
+        border-radius: 40px; 
+        opacity: 0.7;
+    }    
+ 
+    /* . . . . . . . . . . . . . */     
+ 
+    .trackstuff{ 
+        overflow:auto; 
+        margin-left:110px; 
+        margin-top:-75px; 
+        margin-bottom:50px; 
+        display:block;
+    }
+    
+    /* . . . . . . . . . . . . . */        
+ 
+    .playbutton{ 
+        margin-bottom:30px; 
+        margin-top:-60px; 
+        margin-left:35px; 
+        z-index:9; 
+        width:33px; 
+        height:30px; 
+        overflow:hidden;
+    }    
+ 
+    /* . . . . . . . . . . . . . */     
+ 
+    video{ 
+        max-width: 100%; 
+        height: auto;
+    }
+    
+    /* . . . . . . . . . . . . . */        
+ 
+    .caption{
+        margin:5px 0 0 0;
+    }    
+    
+    /* . . . . . . . . . . . . . */            
+    
+    .nav{
+        {block:PermalinkPage}
+        margin:0px;
+        background:none;
+        border:none;
+        {/block:PermalinkPage}
+    }
+    
+    /*******************************
+    
+                 SIDEBAR
+    
+    *******************************/  
+    
+    #sidebar{
+        border:{text:content border size}px {select:content border style} {color:content border};
+        position:fixed;
+        width:200px;
+        background-color:{color:content};
+        margin-left:150px;
+        padding:5px;
+        text-align:center;
+    }
+    
+    
+    /*******************************
+    
+                  OTHER
+    
+    *******************************/ 
+    
+    #credit{
+        bottom:5px;
+        right:5px;
+        font-size:25px;
+        position:fixed;
+    }
+    
+        
+    {CustomCss}
+    </style>
+    </head>
+    <body>
+        <div id="sidebar">
+            <a href="/"><img src="{image:sidebar}" style="display:block;width:100%;height:auto;"></a>
+            <div style="margin:5px 0 5px 0">{text:description}</div>
+            <p><a href="{text:link 1 url}">{text:link 1}</a> {text:link divider} <a href="{text:link 2 url}">{text:link 2}</a> {text:link divider} <a href="{text:link 3 url}">{text:link 3}</a>
+        </div>
+        <div id="content">
+            {block:Posts} 
+                <!--{block:NoRebloggedFrom}{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}{/block:NoRebloggedFrom} --> {block:ContentSource}<!-- {SourceURL}{block:SourceLogo}<img src="{BlackLogoURL}"width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}
+{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo}-->
+{/block:ContentSource}
+ 
+                <div class="post">
+                    <div class="posts" post-type="{PostType}">
+                        <!-- -- -- IMAGES -- -- -->
+                        {block:Photo}
+                            {LinkOpenTag}
+                                <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                            {LinkCloseTag}
+                            {block:Caption}
+                                {Caption}
+                            {/block:Caption}
+                        {/block:Photo}
+                        {block:Photoset}
+                            <div class="media">
+                                {Photoset}
+                            </div>
+                            {block:Caption}
+                                <div class="caption">
+                                    {Caption}
+                                </div>
+                            {/block:Caption}
+                        {/block:Photoset}
+                        <!-- -- -- TEXT -- -- -->
+                        {block:Text}
+                            {block:Title}
+                                <div class="title">{Title}</div>
+                            {/block:Title}
+                            <div class="body">{Body}</div>
+                        {/block:Text}
+                        <!-- -- -- CHAT -- -- -->
+                        {block:Chat}
+                            {block:Title}
+                                <div class="title">
+                                    <h3><a href="{Permalink}">{Title}</a></h3></div>
+                            {/block:Title}
+                            {block:Lines}
+                                <div class="{Alt} user_{UserNumber}">
+                            {block:Label}
+                                <span class="label">{Label}</span>
+                            {/block:Label}
+                                    {Line}
+                                </div>
+                            {/block:Lines}
+                        {/block:Chat}
+                        <!-- -- -- QUOTE -- -- -->
+                        {block:Quote}
+                            <div class="quote">
+                                "{Quote}"
+                            {block:Source}
+                                <div class="source">
+                                    - <i>{Source}</i>
+                                </div>
+                            {/block:Source}
+                            </div>
+                        {/block:Quote}    
+                        <!-- -- -- LINK -- -- -->
+                        {block:Link}
+                            <a href="{URL}" class="link" {Target}>{Name}</a>
+                            {block:Description}
+                                {Description}
+                            {/block:Description}
+                        {/block:Link}
+                        <!-- -- -- VIDEO -- -- -->
+                        {block:Video}
+                            {Video-500}
+                                {block:Caption}
+                                    {Caption}
+                                {/block:Caption}
+                        {/block:Video}
+                        <!-- -- -- AUDIO -- -- -->
+                        {block:Audio}
+                            <div id= "audioplayer">{AudioPlayerWhite}</div>
+                                {block:AlbumArt}
+                                    <div id="albumart">
+                                        <img src="{AlbumArtURL}" width="100">  
+                                    </div>
+                                {/block:AlbumArt}
+                            <div class="trackstuff">
+                                {block:TrackName}
+                                    <b><i>{TrackName}</i></b>
+                                {/block:TrackName}
+                                <br>{block:Artist}
+                                    <i>{Artist}</i>
+                                {/block:Artist}
+                            </div>
+                            {Caption}
+                        {/block:Audio}    
+                        <!-- -- -- ASKS -- -- -->
+                        {block:Answer}
+                            <div class="question">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src="{AskerPortraitURL-128}" style="display:block;border-radius:15px;">
+                                            </td>                    
+                                            <td style="width:300px;">
+                                                <div class="bubble">
+                                                    <div class="asker">
+                                                        {Asker}
+                                                    </div>
+                                                    {Question}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="caption">
+                                {Answer}
+                            </div>
+                        {/block:Answer}    
+                        <!-- -- -- FOOTER -- -- -->
+                        {block:Date}
+                            <div class="footer">
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:300px;text-align:center;border:none">
+                                                <a href="{Permalink}">
+                                                    {block:NoteCount}
+                                                        {NoteCount}% 
+                                                    {/block:NoteCount}
+                                                </a>     
+                                            </td> 
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                                {block:HasTags}
+                                    <div class="tags" style="text-align:center;">
+                                        {block:Tags}
+                                            #<a href="{TagURL}">{Tag}</a> 
+                                        {/block:Tags}
+                                    </div>    
+                                {/block:HasTags} 
+                                {block:PermalinkPage}
+                                    <div class="notes">
+                                        {block:PostNotes}
+                                            {PostNotes}
+                                        {/block:PostNotes}
+                                    </div>    
+                                {/block:PermalinkPage}
+                                <!--{block:NoRebloggedFrom}{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}{/block:NoRebloggedFrom} --> 
+                            </div>
+                        {/block:Date}
+                    </div>
+                </div>
+            {/block:Posts}
+            <div class="nav">
+                {block:Pagination}
+                    <center>
+                        {block:PreviousPage}
+                            <a href="{PreviousPage}">&#10094;</a> 
+                        {/block:PreviousPage}
+                            {block:JumpPagination length="3"}
+                        {block:CurrentPage}
+                            <span class="current_page">{PageNumber}</span>
+                        {/block:CurrentPage}
+                        {block:JumpPage}
+                            <a class="jump_page" href="{URL}">{PageNumber}</a>
+                        {/block:JumpPage}
+                        {/block:JumpPagination}
+                        {block:NextPage}
+                            <a href="{NextPage}">&#10095;</a>
+                        {/block:NextPage}
+                    </center>
+                {/block:Pagination}
+            </div>
+        </div>
+        <div id="credit">
+            <a title="Theme by Hajime" href="https://cloverparty.tumblr.com/tagged/mine">ミ★</a>
+        </div>
+    </body>
+</html> 
