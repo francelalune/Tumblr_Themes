@@ -1,0 +1,1606 @@
+    <!DOCTYPE HTML>
+    <head>
+    <meta charset="utf-8" />
+    <!--
+    
+    // Beanie Tumblr theme by Mochizuki Hajime
+    // Theme Version 1.0.1
+    // Published 12/1/23, last updated 12/1/23
+    // Made for Cody 
+    
+        -------------------------------
+        
+    // ♡ You may:
+        1. Report bugs or make suggestions
+        2. Add, remove or alter features     
+    
+        -------------------------------
+    
+    // X You may not:
+        1. Remove or edit the credit
+        2. Claim as your own work
+    
+        -------------------------------
+    
+    // Credits
+        1. glenthemes for photo script   
+        2. Apricot font: http://www8.plala.or.jp/p_dolce/site3-7.html
+    
+        -------------------------------
+    
+    // Notes
+        1. Because this theme requires you to know a little bit of HTML (in order to do things such as inserting images/text in the sidebars), here are some pieces of HTML to help you do the bare minimum ! 
+            a. <img src="url" style="width:100%;"> to insert images.
+            b. <a href="url">link</a> to insert links.
+            c. <text style="color:blue;">text</text> to customize text style.
+            d. <center>text</center> to center content.
+            e. <p> for page break, <br> for line break
+        
+    ----------------------------------->
+    
+    
+    
+    <!--*******************************
+                   Colors
+    *******************************-->
+     
+    <meta name="color:background" content="">
+    <meta name="color:text" content=""> 
+    <meta name="color:link" content="">
+    <meta name="color:link hover" content="">
+    <meta name="color:link shadow" content="">
+    <meta name="color:link border" content="">    
+    
+    <meta name="color:sidebar" content="">
+    <meta name="color:content" content="">
+    <meta name="color:content border" content="">
+    <meta name="color:content shadow" content="">
+    <meta name="color:content container" content="">
+    
+    <meta name="color:container border" content="">
+     
+    <meta name="color:footer" content="">
+    <meta name="color:footer link" content="">
+    <meta name="color:footer text" content="">
+    <meta name="color:footer link hover" content="">
+    <meta name="color:footer link shadow" content="">
+    <meta name="color:footer link border" content="">
+    <meta name="color:footer link border hover" content="">
+    
+    <meta name="color:ask" content="">
+    
+    <meta name="color:text selection" content="">
+    <meta name="color:text selection bg" content="">
+    
+    <meta name="color:tooltip" content="">
+    <meta name="color:tooltip text" content="">
+    
+    <meta name="color:link button" content="">
+    <meta name="color:link button link border" content="">
+    
+    <meta name="color:link button hover" content="">
+    <meta name="color:link button link border hover" content="">
+    
+    <meta name="color:cursor sparkles" content="#fff">
+    <meta name="color:cursor floaties 1" content="">
+    <meta name="color:cursor floaties 2" content="">
+    <meta name="color:cursor floaties 3" content="">
+    
+    
+    <!--*******************************
+                   Images
+     *******************************-->    
+     
+    <meta name="image:favicon" content="">
+    <meta name="image:background" content="">
+    <meta name="image:content container" content="">
+    <meta name="image:header" content="">
+    <meta name="image:cursor" content="">
+     
+    <!--*******************************
+                   Options
+     *******************************-->
+    
+    <meta name="if:custom cursor" content="">
+    <meta name="if:link shadow" content="">
+    <meta name="if:scrolling site title" content="">
+    <meta name="if:redirect">
+    <meta name="if:full background" content="">
+    <meta name="if:content shadow" content="">
+    <meta name="if:round content" content="">
+    <meta name="if:pastel rainbow links" content=""> 
+    <meta name="if:bright rainbow links" content=""> 
+    <meta name="if:bold links" content="">
+    <meta name="if:round images" content="">
+    <meta name="if:link underline" content="">
+    <meta name="if:wavy link underline" content="">
+    <meta name="if:italic links" content="">
+    <meta name="if:text shadow" content="">
+    <meta name="if:link shadow" content="">
+    <meta name="if:link underline" content="">
+    <meta name="if:link borders" content="">  
+    <meta name="if:bold links" content="">
+    <meta name="if:cursor sparkles" content="">
+    <meta name="if:star cursor floaties" content="">
+    <meta name="if:music note cursor floaties" content="">
+    <meta name="if:heart cursor floaties" content="">   
+    <meta name="if:image hue shift on hover" content="">
+    <meta name="if:image grayscale on hover" content="">
+    
+    <!--*******************************
+                    Text
+     *******************************-->
+     
+     <meta name="text:header vertical position" content="50">
+     <meta name="text:header horizontal position" content="50">
+     <meta name="text:content border size" content="1">
+     
+     <meta name="text:left sidebar content" content="This is the left sidebar, you can put whatever you want here, read the information at the top of the code to learn how to input images, style images and text, and others...">
+     <meta name="text:right sidebar content" content="">
+     
+     <meta name="text:link one" content="My link">
+     <meta name="text:link one url" content="My link">
+     
+     
+    <!--*******************************
+                    Fonts
+     *******************************-->    
+    
+    <meta name="select:font family" content="arial">
+    <meta name="select:font family" content="magica">
+    <meta name="select:font family" content="short stack">
+    <meta name="select:font family" content="ms gothic">
+    <meta name="select:font family" content="roboto mono">
+    <meta name="select:font family" content="dancing">    
+    <meta name="select:font family" content="pixel"> 
+    <meta name="select:font family" content="apricot"> 
+    
+    <meta name="select:content border" content="solid">
+    <meta name="select:content border" content="dotted">
+    <meta name="select:content border" content="dashed">
+    <meta name="select:content border" content="double">
+    <meta name="select:content border" content="inset">
+    <meta name="select:content border" content="outset">
+    <meta name="select:content border" content="ridge">
+    <meta name="select:content border" content="none">
+    
+    <meta name="select:container border" content="solid">
+    <meta name="select:container border" content="dotted">
+    <meta name="select:container border" content="dashed">
+    <meta name="select:container border" content="double">
+    <meta name="select:container border" content="inset">
+    <meta name="select:container border" content="outset">
+    <meta name="select:container border" content="ridge">
+    <meta name="select:container border" content="none"> 
+    
+
+    
+    
+    <title>{Title}</title>
+    {block:ifscrollingsitetitle}
+    <script>var documentTitle = document.title + " ☆ ";
+
+
+(function titleMarquee() {
+    document.title = documentTitle = documentTitle.substring(1) + documentTitle.substring(0,1);
+    setTimeout(titleMarquee, 200);
+})();</script> 
+    {/block:ifscrollingsitetitle}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{image:favicon}">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="//glen-npf-2020.glitch.me/npf-override.css" rel="stylesheet">
+    <script src="//glen-npf-2020.glitch.me/npf-evenize.js"></script>    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
+<script>
+							(function($){
+							$(document).ready(function(){
+							$("[title]").style_my_tooltips({
+							tip_follows_cursor: true,
+							tip_delay_time:100,
+							tip_fade_speed:300,
+							attribute:"title"
+							});
+							});
+							})(jQuery);
+</script>    
+    
+{block:ifcursorsparkles}
+<script type="text/javascript">
+// <![CDATA[
+var colour="{color:cursor sparkles}"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+var sparkles=50;
+
+/****************************
+*  Tinkerbell Magic Sparkle *
+*(c)2005-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var tiny=new Array();
+var star=new Array();
+var starv=new Array();
+var starx=new Array();
+var stary=new Array();
+var tinyx=new Array();
+var tinyy=new Array();
+var tinyv=new Array();
+
+window.onload=function() { if (document.getElementById) {
+  var i, rats, rlef, rdow;
+  for (var i=0; i<sparkles; i++) {
+    var rats=createDiv(3, 3);
+    rats.style.visibility="hidden";
+    rats.style.zIndex="999";
+    document.body.appendChild(tiny[i]=rats);
+    starv[i]=0;
+    tinyv[i]=0;
+    var rats=createDiv(5, 5);
+    rats.style.backgroundColor="transparent";
+    rats.style.visibility="hidden";
+    rats.style.zIndex="999";
+    var rlef=createDiv(1, 5);
+    var rdow=createDiv(5, 1);
+    rats.appendChild(rlef);
+    rats.appendChild(rdow);
+    rlef.style.top="2px";
+    rlef.style.left="0px";
+    rdow.style.top="0px";
+    rdow.style.left="2px";
+    document.body.appendChild(star[i]=rats);
+  }
+  set_width();
+  sparkle();
+}}
+
+function sparkle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<sparkles; c++) if (!starv[c]) {
+      star[c].style.left=(starx[c]=x)+"px";
+      star[c].style.top=(stary[c]=y+1)+"px";
+      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+      star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
+      star[c].style.visibility="visible";
+      starv[c]=50;
+      break;
+    }
+  }
+  for (c=0; c<sparkles; c++) {
+    if (starv[c]) update_star(c);
+    if (tinyv[c]) update_tiny(c);
+  }
+  setTimeout("sparkle()", 40);
+}
+
+function update_star(i) {
+  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+  if (starv[i]) {
+    stary[i]+=1+Math.random()*3;
+    starx[i]+=(i%5-2)/5;
+    if (stary[i]<shigh+sdown) {
+      star[i].style.top=stary[i]+"px";
+      star[i].style.left=starx[i]+"px";
+    }
+    else {
+      star[i].style.visibility="hidden";
+      starv[i]=0;
+      return;
+    }
+  }
+  else {
+    tinyv[i]=50;
+    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+    tiny[i].style.width="2px";
+    tiny[i].style.height="2px";
+    tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
+    star[i].style.visibility="hidden";
+    tiny[i].style.visibility="visible"
+  }
+}
+
+function update_tiny(i) {
+  if (--tinyv[i]==25) {
+    tiny[i].style.width="1px";
+    tiny[i].style.height="1px";
+  }
+  if (tinyv[i]) {
+    tinyy[i]+=1+Math.random()*3;
+    tinyx[i]+=(i%5-2)/5;
+    if (tinyy[i]<shigh+sdown) {
+      tiny[i].style.top=tinyy[i]+"px";
+      tiny[i].style.left=tinyx[i]+"px";
+    }
+    else {
+      tiny[i].style.visibility="hidden";
+      tinyv[i]=0;
+      return;
+    }
+  }
+  else tiny[i].style.visibility="hidden";
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  return (div);
+}
+
+function newColour() {
+  var c=new Array();
+  c[0]=255;
+  c[1]=Math.floor(Math.random()*256);
+  c[2]=Math.floor(Math.random()*(256-c[1]/2));
+  c.sort(function(){return (0.5 - Math.random());});
+  return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
+}
+// ]]>
+</script>
+{/block:ifcursorsparkles}
+
+{block:ifheartcursorfloaties}
+<script type="text/javascript">
+// <![CDATA[
+var colours=new Array('{color:cursor floaties 1}', '{color:cursor floaties 2}', '{color:cursor floaties 3}'); // colours of the hearts
+var minisize=15; // smallest size of hearts in pixels
+var maxisize=20; // biggest size of hearts in pixels
+var hearts=66; // maximum number of hearts on screen
+var over_or_under="over"; // set to "over" for hearts to always be on top, or "under" to allow them to float behind other objects
+ 
+/*****************************
+*JavaScript Love Heart Cursor*
+*  (c)2013+ mf2fm web-design *
+*   http://www.mf2fm.com/rv  *
+*  DON'T EDIT BELOW THIS BOX *
+*****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var herz=new Array();
+var herzx=new Array();
+var herzy=new Array();
+var herzs=new Array();
+var kiss=false;
+ 
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+ 
+addRVLoadEvent(mwah);
+ 
+function mwah() { if (document.getElementById) {
+  var i, heart;
+  for (i=0; i<hearts; i++) {
+    heart=createDiv("auto", "auto");
+    heart.style.visibility="hidden";
+	heart.style.zIndex=(over_or_under=="over")?"1001":"0";
+    heart.style.color=colours[i%colours.length];
+	heart.style.pointerEvents="none";
+    if (navigator.appName=="Microsoft Internet Explorer") heart.style.filter="alpha(opacity=75)";
+    else heart.style.opacity=0.75;
+    heart.appendChild(document.createTextNode(String.fromCharCode(9829)));
+    document.body.appendChild(heart);
+    herz[i]=heart;
+	herzy[i]=false;
+  }
+  set_scroll();
+  set_width();
+  herzle();
+}}
+ 
+function herzle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<hearts; c++) if (herzy[c]===false) {
+	  herz[c].firstChild.nodeValue=String.fromCharCode(9829);
+      herz[c].style.left=(herzx[c]=x-minisize/2)+"px";
+      herz[c].style.top=(herzy[c]=y-minisize)+"px";
+      herz[c].style.fontSize=minisize+"px";
+	  herz[c].style.fontWeight='normal';
+      herz[c].style.visibility='visible';
+      herzs[c]=minisize;
+      break;
+    }
+  }
+  for (c=0; c<hearts; c++) if (herzy[c]!==false) blow_me_a_kiss(c);
+  setTimeout("herzle()", 40);
+}
+ 
+document.onmousedown=pucker;
+document.onmouseup=function(){clearTimeout(kiss);};
+ 
+function pucker() {
+  ox=-1;
+  oy=-1;
+  kiss=setTimeout('pucker()', 100);
+}
+ 
+function blow_me_a_kiss(i) {
+  herzy[i]-=herzs[i]/minisize+i%2;
+  herzx[i]+=(i%5-2)/5;
+  if (herzy[i]<sdown-herzs[i] || herzx[i]<sleft-herzs[i] || herzx[i]>sleft+swide-herzs[i]) {
+    herz[i].style.visibility="hidden";
+    herzy[i]=false;
+  }
+  else if (herzs[i]>minisize+2 && Math.random()<.5/hearts) break_my_heart(i);
+  else {
+    if (Math.random()<maxisize/herzy[i] && herzs[i]<maxisize) herz[i].style.fontSize=(++herzs[i])+"px";
+    herz[i].style.top=herzy[i]+"px";
+    herz[i].style.left=herzx[i]+"px";
+  }
+}
+ 
+function break_my_heart(i) {
+  var t;
+  herz[i].firstChild.nodeValue=String.fromCharCode(9676);
+  herz[i].style.fontWeight='bold';
+  herzy[i]=false;
+  for (t=herzs[i]; t<=maxisize; t++) setTimeout('herz['+i+'].style.fontSize="'+t+'px"', 60*(t-herzs[i]));
+  setTimeout('herz['+i+'].style.visibility="hidden";', 60*(t-herzs[i]));
+}
+ 
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+ 
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+ 
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+ 
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height;
+  div.style.width=width;
+  div.style.overflow="hidden";
+  div.style.backgroundColor="transparent";
+  return (div);
+}
+// ]]>
+</script>
+{/block:ifheartcursorfloaties}
+
+<!---->
+ 
+{block:ifmusicnotecursorfloaties}
+<script type="text/javascript">
+// <![CDATA[
+var colours=new Array('{color:cursor floaties 1}', '{color:cursor floaties 2}', '{color:cursor floaties 3}'); // colours of the hearts
+var minisize=15; // smallest size of hearts in pixels
+var maxisize=20; // biggest size of hearts in pixels
+var hearts=66; // maximum number of hearts on screen
+var over_or_under="over"; // set to "over" for hearts to always be on top, or "under" to allow them to float behind other objects
+ 
+/*****************************
+*JavaScript Love Heart Cursor*
+*  (c)2013+ mf2fm web-design *
+*   http://www.mf2fm.com/rv  *
+*  DON'T EDIT BELOW THIS BOX *
+*****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var herz=new Array();
+var herzx=new Array();
+var herzy=new Array();
+var herzs=new Array();
+var kiss=false;
+ 
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+ 
+addRVLoadEvent(mwah);
+ 
+function mwah() { if (document.getElementById) {
+  var i, heart;
+  for (i=0; i<hearts; i++) {
+    heart=createDiv("auto", "auto");
+    heart.style.visibility="hidden";
+	heart.style.zIndex=(over_or_under=="over")?"1001":"0";
+    heart.style.color=colours[i%colours.length];
+	heart.style.pointerEvents="none";
+    if (navigator.appName=="Microsoft Internet Explorer") heart.style.filter="alpha(opacity=75)";
+    else heart.style.opacity=0.75;
+    heart.appendChild(document.createTextNode(String.fromCharCode(9834)));
+    document.body.appendChild(heart);
+    herz[i]=heart;
+	herzy[i]=false;
+  }
+  set_scroll();
+  set_width();
+  herzle();
+}}
+ 
+function herzle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<hearts; c++) if (herzy[c]===false) {
+	  herz[c].firstChild.nodeValue=String.fromCharCode(9834);
+      herz[c].style.left=(herzx[c]=x-minisize/2)+"px";
+      herz[c].style.top=(herzy[c]=y-minisize)+"px";
+      herz[c].style.fontSize=minisize+"px";
+	  herz[c].style.fontWeight='normal';
+      herz[c].style.visibility='visible';
+      herzs[c]=minisize;
+      break;
+    }
+  }
+  for (c=0; c<hearts; c++) if (herzy[c]!==false) blow_me_a_kiss(c);
+  setTimeout("herzle()", 40);
+}
+ 
+document.onmousedown=pucker;
+document.onmouseup=function(){clearTimeout(kiss);};
+ 
+function pucker() {
+  ox=-1;
+  oy=-1;
+  kiss=setTimeout('pucker()', 100);
+}
+ 
+function blow_me_a_kiss(i) {
+  herzy[i]-=herzs[i]/minisize+i%2;
+  herzx[i]+=(i%5-2)/5;
+  if (herzy[i]<sdown-herzs[i] || herzx[i]<sleft-herzs[i] || herzx[i]>sleft+swide-herzs[i]) {
+    herz[i].style.visibility="hidden";
+    herzy[i]=false;
+  }
+  else if (herzs[i]>minisize+2 && Math.random()<.5/hearts) break_my_heart(i);
+  else {
+    if (Math.random()<maxisize/herzy[i] && herzs[i]<maxisize) herz[i].style.fontSize=(++herzs[i])+"px";
+    herz[i].style.top=herzy[i]+"px";
+    herz[i].style.left=herzx[i]+"px";
+  }
+}
+ 
+function break_my_heart(i) {
+  var t;
+  herz[i].firstChild.nodeValue=String.fromCharCode(9676);
+  herz[i].style.fontWeight='bold';
+  herzy[i]=false;
+  for (t=herzs[i]; t<=maxisize; t++) setTimeout('herz['+i+'].style.fontSize="'+t+'px"', 60*(t-herzs[i]));
+  setTimeout('herz['+i+'].style.visibility="hidden";', 60*(t-herzs[i]));
+}
+ 
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+ 
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+ 
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+ 
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height;
+  div.style.width=width;
+  div.style.overflow="hidden";
+  div.style.backgroundColor="transparent";
+  return (div);
+}
+// ]]>
+</script>
+{/block:ifmusicnotecursorfloaties}
+
+<!----> 
+ 
+{block:ifstarcursorfloaties}
+<script type="text/javascript">
+// <![CDATA[
+var colours=new Array('{color:cursor floaties 1}', '{color:cursor floaties 2}', '{color:cursor floaties 3}'); // colours of the hearts
+var minisize=15; // smallest size of hearts in pixels
+var maxisize=20; // biggest size of hearts in pixels
+var hearts=66; // maximum number of hearts on screen
+var over_or_under="over"; // set to "over" for hearts to always be on top, or "under" to allow them to float behind other objects
+ 
+/*****************************
+*JavaScript Love Heart Cursor*
+*  (c)2013+ mf2fm web-design *
+*   http://www.mf2fm.com/rv  *
+*  DON'T EDIT BELOW THIS BOX *
+*****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var herz=new Array();
+var herzx=new Array();
+var herzy=new Array();
+var herzs=new Array();
+var kiss=false;
+ 
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+ 
+addRVLoadEvent(mwah);
+ 
+function mwah() { if (document.getElementById) {
+  var i, heart;
+  for (i=0; i<hearts; i++) {
+    heart=createDiv("auto", "auto");
+    heart.style.visibility="hidden";
+	heart.style.zIndex=(over_or_under=="over")?"1001":"0";
+    heart.style.color=colours[i%colours.length];
+	heart.style.pointerEvents="none";
+    if (navigator.appName=="Microsoft Internet Explorer") heart.style.filter="alpha(opacity=75)";
+    else heart.style.opacity=0.75;
+    heart.appendChild(document.createTextNode(String.fromCharCode(9733)));
+    document.body.appendChild(heart);
+    herz[i]=heart;
+	herzy[i]=false;
+  }
+  set_scroll();
+  set_width();
+  herzle();
+}}
+ 
+function herzle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<hearts; c++) if (herzy[c]===false) {
+	  herz[c].firstChild.nodeValue=String.fromCharCode(9733);
+      herz[c].style.left=(herzx[c]=x-minisize/2)+"px";
+      herz[c].style.top=(herzy[c]=y-minisize)+"px";
+      herz[c].style.fontSize=minisize+"px";
+	  herz[c].style.fontWeight='normal';
+      herz[c].style.visibility='visible';
+      herzs[c]=minisize;
+      break;
+    }
+  }
+  for (c=0; c<hearts; c++) if (herzy[c]!==false) blow_me_a_kiss(c);
+  setTimeout("herzle()", 40);
+}
+ 
+document.onmousedown=pucker;
+document.onmouseup=function(){clearTimeout(kiss);};
+ 
+function pucker() {
+  ox=-1;
+  oy=-1;
+  kiss=setTimeout('pucker()', 100);
+}
+ 
+function blow_me_a_kiss(i) {
+  herzy[i]-=herzs[i]/minisize+i%2;
+  herzx[i]+=(i%5-2)/5;
+  if (herzy[i]<sdown-herzs[i] || herzx[i]<sleft-herzs[i] || herzx[i]>sleft+swide-herzs[i]) {
+    herz[i].style.visibility="hidden";
+    herzy[i]=false;
+  }
+  else if (herzs[i]>minisize+2 && Math.random()<.5/hearts) break_my_heart(i);
+  else {
+    if (Math.random()<maxisize/herzy[i] && herzs[i]<maxisize) herz[i].style.fontSize=(++herzs[i])+"px";
+    herz[i].style.top=herzy[i]+"px";
+    herz[i].style.left=herzx[i]+"px";
+  }
+}
+ 
+function break_my_heart(i) {
+  var t;
+  herz[i].firstChild.nodeValue=String.fromCharCode(9676);
+  herz[i].style.fontWeight='bold';
+  herzy[i]=false;
+  for (t=herzs[i]; t<=maxisize; t++) setTimeout('herz['+i+'].style.fontSize="'+t+'px"', 60*(t-herzs[i]));
+  setTimeout('herz['+i+'].style.visibility="hidden";', 60*(t-herzs[i]));
+}
+ 
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+ 
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+ 
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+ 
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height;
+  div.style.width=width;
+  div.style.overflow="hidden";
+  div.style.backgroundColor="transparent";
+  return (div);
+}
+// ]]>
+</script>
+{/block:ifstarcursorfloaties}    
+    
+    <style type="text/css">
+    
+    
+    /*********************************
+    
+               Document Body
+    
+    *********************************/
+    
+    body{
+        font-family:arial;
+        background-image:url({image:background});
+        {block:iffullbackground} 
+        background-size: cover;
+        {/block:iffullbackground}
+        font-family:{select:font family};
+        color:{color:text};
+        font-size:{text:font size}px;
+        {block:ifcustomcursor}
+        cursor:url("{image:cursor}"), default;
+        {/block:ifcustomcursor}
+        {block:iftextshadow}
+        text-shadow: 1px 1px 3px {color:text shadow}, 0 0 1em {color:text shadow}, 0 0 0.2em {color:text shadow};
+        {/block:iftextshadow}
+    }
+    /* . . . . . . . . . . . . . . . */     
+    a{
+        color:{color:link};
+        text-decoration:none;
+{block:ifpastelrainbowlinks}
+        -webkit-text-stroke: 0.5px {color:rainbow link outline};
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        background-size: 120% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        -ms-background-clip: text;
+        -ms-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        transition: all 0.15s cubic-bezier(0.68, -0.25, 0.265, 1.25);
+        background-image: linear-gradient(45deg, #f393fe, #ce93ff, #909cff, #8fd4ff, #90ffef, #93ff92, #e0fe93, #fde091, #ffba91, #ff939c, #fe92dc);
+        {/block:ifpastelrainbowlinks};
+        {block:ifbrightrainbowlinks};
+        -webkit-text-stroke: 0.5px {color:rainbow link outline};
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        background-size: 120% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        -ms-background-clip: text;
+        -ms-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        transition: all 0.15s cubic-bezier(0.68, -0.25, 0.265, 1.25);
+        background-image: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080);
+        {/block:ifbrightrainbowlinks};
+        {block:ifboldlinks}
+        font-weight:bold;
+        {/block:ifboldlinks}      
+        {block:ifwavylinkunderline}
+        text-decoration: underline wavy {color:link};
+        {/block:ifwavylinkunderline}
+        {block:iflinkunderline}
+        text-decoration:underline;
+        {/block:iflinkunderline}    
+        {block:ifitaliclinks}
+        font-style:italic;
+        {/block:ifitaliclinks} 
+        {block:iflinkshadow}
+        text-shadow: 1px 1px 3px {color:link shadow}, 0 0 1em {color:link shadow}, 0 0 0.2em {color:link shadow};
+        {/block:iflinkshadow}    
+        {block:iflinkborders}
+        text-shadow: -1px 0  {color:link border}, 0 1px  {color:link border}, 1px 0  {color:link border}, 0 -1px  {color:link border};
+        {/block:iflinkborders}        
+    }
+    /* . . . . . . . . . . . . . . . */         
+    a:hover{
+        color:{color:link hover};
+    }
+    /* . . . . . . . . . . . . . . . */     
+    @font-face {
+        font-family: 'Dancing';
+        src:url(https://files.catbox.moe/e7t1ga.ttf);
+    }
+    /* . . . . . . . . . . . . . . . */     
+    @font-face {
+        font-family: 'Pixel';
+        src:url(https://files.catbox.moe/b3525y.ttf);
+    }
+    /* . . . . . . . . . . . . . . . */     
+    @font-face {
+        font-family: 'Apricot';
+        src:url(https://files.catbox.moe/bk6rk8.ttf);
+    }    
+    /* . . . . . . . . . . . . . . . */         
+     @font-face {
+       font-family: 'Dancing';
+        src:url(https://files.catbox.moe/e7t1ga.ttf);
+    }
+    /* . . . . . . . . . . . . . . . */     
+    @font-face {
+        font-family: 'short stack';
+        src:url(https://files.catbox.moe/k0j0uw.ttf);
+    }    
+    /* . . . . . . . . . . . . . . . */                    
+    @font-face{
+        font-family: 'Magica';
+        src: url(https://static.tumblr.com/p6yopnt/Qkiqnu0r5/theheart.ttf);
+    }    
+    /* . . . . . . . . . . . . . . . */                    
+    @font-face{
+        font-family: 'roboto mono';
+        src: url(https://files.catbox.moe/583egg.ttf);
+    }        
+    /* . . . . . . . . . . . . . . . */ 
+    .npf_row {
+        margin: 0 !important;
+    }
+    /* . . . . . . . . . . . . . . . */        
+    blockquote{
+        border-left:1px solid blue;
+        padding-left:10px;
+        margin: 15px;
+    }
+    /* . . . . . . . . . . . . . . . */        
+    p{
+        margin:0 0 5px 0;
+        padding:0;
+    }
+    /* . . . . . . . . . . . . . . . */        
+    :root {
+        --NPF-Image-Spacing:4px;
+        --NPF-Bottom-Gap-From-Captions:1em;
+    }    
+    /* . . . . . . . . . . . . . . . */        
+    #s-m-t-tooltip{
+	    max-width: 300px;
+	    z-index: 10;
+	    margin: 24px 14px 7px 12px;
+	    padding:8px;
+	    border-radius:3px;
+        background: {color:tooltip};
+	    color: {color:tooltip text};
+	    box-shadow: 0px 0px 5px 5px {color:tooltip};
+    }    
+    /* . . . . . . . . . . . . . . . */            
+    ::selection{ 
+        color:{color:text selection}; 
+        background-color:{color:text selection bg};
+    }    
+    
+    /*********************************
+    
+            Container + Posts
+    
+    *********************************/
+    
+    #container{
+        width:1000px;
+        height:615px;
+        margin-top:3px;
+        position:absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow-y:hidden;
+    }
+    /* . . . . . . . . . . . . . . . */     
+    #post-container{
+        float:left;
+        overflow-y:auto;
+        border-top:none;
+        border-left:1px {select:container border} {color:container border};
+        border-right:1px {select:container border} {color:container border};
+        border-bottom:1px {select:container border} {color:container border};
+        background-color:{color:content container};
+        background-image:url({image:content container});
+        width:576px;
+        height:456px;
+    }
+    /* . . . . . . . . . . . . . . . */         
+    #pc{
+        margin-left:80px;
+    }
+    /* . . . . . . . . . . . . . . . */       
+    .post{
+        width:400px;
+        padding:5px;
+        border:{text:content border size}px {select:content border} {color:content border};
+        margin:10px 0 20px 0;
+        {block:ifcontentshadow}        
+        box-shadow: 5px 5px {color:content shadow};
+        {/block:ifcontentshadow}        
+        background-color:{color:content};
+        {block:ifroundcontent}
+        border-radius:10px;
+        {/block:ifroundcontent}
+    }
+    /* . . . . . . . . . . . . . . . */        
+    .post img{
+        max-width:100%;
+        height:auto;
+        {block:ifroundimages}
+        border-radius:10px;
+        {/block:ifroundimages}
+    }    
+    
+    /*********************************
+        
+            Regular Post Stuff
+    
+    *********************************/    
+    
+    #audioplayer{ 
+        width:30px; 
+        height:25px; 
+        overflow:hidden; 
+        position:absolute; 
+        margin-top:40px; 
+        margin-bottom:40px; 
+        margin-left:35px; 
+        border-radius: 40px; 
+        opacity: 0.7;
+    }    
+    /* . . . . . . . . . . . . . . . */ 
+    .trackstuff{ 
+        overflow:auto; 
+        margin-left:110px; 
+        margin-top:-75px; 
+        margin-bottom:50px; 
+        display:block;
+    }    
+    /* . . . . . . . . . . . . . . . */     
+    .playbutton{ 
+        margin-bottom:30px; 
+        margin-top:-60px; 
+        margin-left:35px; 
+        z-index:9; 
+        width:33px; 
+        height:30px; 
+        overflow:hidden;
+    }    
+    /* . . . . . . . . . . . . . . . */      
+    video{ 
+        max-width: 100%; 
+        height: auto;
+    }    
+    /* . . . . . . . . . . . . . . . */       
+    .caption{
+        margin:5px 0 0 0;
+    }    
+    /* . . . . . . . . . . . . . . . */      
+    .question{
+        background:transparent;
+    }    
+    /* . . . . . . . . . . . . . . . */        
+    .bubble {
+        position: relative;
+        margin-left:20px;
+        width:250px;     
+        background:{color:ask};
+        padding:15px;
+        border-radius: 10px;
+        margin-top:5px;
+    }    
+    /* . . . . . . . . . . . . . . . */        
+    .bubble:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        z-index: 1;
+        border-style: solid;
+        border-color: transparent {color:ask};
+        border-width: 20px 20px 20px 0;
+        top: 50%;
+        left: -20px;
+        margin-top: -20px;
+    }    
+    /* . . . . . . . . . . . . . . . */       
+    .asker{
+        margin:0 0 5px 0;
+    }    
+    /* . . . . . . . . . . . . . . . */    
+    ol.notes{
+        list-style-type:none;
+        text-align:left;
+        padding:3px;
+        overflow:auto;
+    }  
+    /* . . . . . . . . . . . . . . . */        
+    .post img{
+        max-width:100%;
+        height:auto;
+    } 
+    /* . . . . . . . . . . . . . . . */
+    .title{
+        font-size:30px;
+        margin:5px 0 5px 0;
+    }
+    /* . . . . . . . . . . . . . . . */
+    .footer{
+        padding:10px;
+        color:{color:footer text};
+        background-color:{color:footer};
+        {block:ifroundcontent}
+        border-radius:10px;
+        {/block:ifroundcontent}
+        {block:iflinkborders}
+text-shadow: -1px 0  {color:footer link border}, 0 1px  {color:footer link border}, 1px 0  {color:footer link border}, 0 -1px  {color:footer link border}
+        {/block:iflinkborders}
+    }
+    /* . . . . . . . . . . . . . . . */
+    .footer a{
+        color:{color:footer link};
+        {block:iftextshadow}
+        text-shadow: 1px 1px 3px {color:footer link shadow}, 0 0 1em {color:footer link shadow}, 0 0 0.2em {color:footer link shadow};
+        {/block:iftextshadow}
+        {block:iflinkborders}
+text-shadow: -1px 0  {color:footer link border}, 0 1px  {color:footer link border}, 1px 0  {color:footer link border}, 0 -1px  {color:footer link border};
+        {/block:iflinkborders}
+    }
+    /* . . . . . . . . . . . . . . . */   
+    .footer a:hover{
+        color:{color:footer link hover};
+        {block:iftextshadow}
+        text-shadow: 1px 1px 3px {color:footer link shadow}, 0 0 1em {color:footer link shadow}, 0 0 0.2em {color:footer link shadow};
+        {/block:iftextshadow}
+        {block:iflinkborders}
+text-shadow: -1px 0  {color:footer link border hover}, 0 1px  {color:footer link border hover}, 1px 0  {color:footer link border hover}, 0 -1px  {color:footer link border hover};
+        {/block:iflinkborders}
+    }    
+    
+    /*********************************
+    
+            Sidebars + Header
+    
+    *********************************/
+    
+    #header-container{
+        width:998px;
+        height:155px;
+        border-top:1px {select:container border} {color:container border};
+        border-left:1px {select:container border} {color:container border};
+        border-right:1px {select:container border} {color:container border};
+        border-bottom:none;
+        object-fit: fill;
+        background-position: {text:header horizontal position}% {text:header vertical position}%; 
+        background-image:url('{image:header}');
+    }
+    /* . . . . . . . . . . . . . . . */  
+    #sidebar-left{
+        float:left;
+        border-top:none;
+        border-left:1px {select:container border} {color:container border};
+        background-color:{color:sidebar};
+        border-bottom:1px {select:container border} {color:container border};
+        border-right:none;
+        padding:5px;
+        width:200px;
+        overflow:hidden;
+        height:446px;
+    }
+    /* . . . . . . . . . . . . . . . */  
+    #sidebar-right{
+        float:left;
+        border-top:none;
+        border-right:1px {select:container border} {color:container border};
+        border-left:none;
+        border-bottom:1px {select:container border} {color:container border};
+        padding:5px;
+        overflow:hidden;
+        background-color:{color:sidebar};
+        width:200px;
+        height:446px;
+    }
+    
+    /*********************************
+        
+                  Other
+    
+    *********************************/   
+    
+    #c{
+        bottom:5px;
+        right:5px;
+        font-size:32px;
+        font-weight:bold;
+        position:fixed;
+    }    
+    /* . . . . . . . . . . . . . . . */     
+    {block:ifimagehueshiftonhover}
+    img{
+        -webkit-filter: hue-rotate(0deg);
+        -webkit-transition: 5s ease-in-out;
+        -moz-filter: grayscale(0%);
+        -moz-transition: 5s ease-in-out;
+        -o-filter: grayscale(0%);
+        -o-transition: 5s ease-in-out;} 
+    /* . . . . . . . . . . . . . . . */ 
+    img:hover{
+        animation-iteration-count:infinite;
+        -webkit-filter: hue-rotate(360deg);
+        -webkit-transition: 5s ease-in-out;
+        -moz-filter: hue-rotate(360deg); 
+        -moz-transition: 5s ease-in-out;
+        -o-filter: hue-rotate(360deg); 
+        -o-transition: 5s ease-in-out;} 
+    {/block:ifimagehueshiftonhover}
+    {block:ifimagegrayscaleonhover}
+    img {
+        filter: grayscale(0%);
+        transition: .25s ease-out;
+    }
+    /* . . . . . . . . . . . . . . . */  
+    img:hover {
+        filter: grayscale(100%);
+        transition: .25s ease-in;
+    }
+    {/block:ifimagegrayscaleonhover}    
+    
+    {CustomCss}
+    </style>
+    </head>
+    <body>
+        <div id="container">
+        
+            <div id="header-container">
+                <div style="height:117px;">
+                    
+                </div>
+                <div style="height:36px;">
+                    <table style="border-collapse: collapse;">
+                        <tbody>
+                            <tr style="text-align:center;">
+                                <td style="width:250px;padding: 0;margin: 0;">
+                                    <a data-toggle="tooltip" title="{lang:Home}" href="/" style="font-weight:bold;text-decoration:none;"><div style="height:22px;background:{color:link button};border:3px outset {color:link button};padding:5px;text-shadow: -1px 0  {color:link button link border}, 0 1px  {color:link button link border}, 1px 0  {color:link button link border}, 0 -1px  {color:link button link border};color:white;">{lang:Home}</div></a>
+                                </td>
+                                <td style="width:250px;padding: 0;margin: 0;">
+                                    <a data-toggle="tooltip" title="{AskLabel}" href="/ask" style="font-weight:bold;text-decoration:none;"><div style="height:22px;padding:5px;background:{color:link button};border:3px outset {color:link button};text-shadow: -1px 0  #0000FF, 0 1px  #0000FF, 1px 0  #0000FF, 0 -1px  #0000FF;color:white;">{AskLabel}</div></a>
+                                </td>
+                                <td style="width:250px;padding: 0;margin: 0;">
+                                   <a data-toggle="tooltip" title="{lang:Archive}" href="/archive" style="font-weight:bold;text-decoration:none;"><div style="height:22px;background:{color:link button};border:3px outset {color:link button};padding:5px;text-shadow: -1px 0  #0000FF, 0 1px  #0000FF, 1px 0  #0000FF, 0 -1px  #0000FF;color:white;">{lang:Archive}</div></a>
+                                </td>
+                                <td style="width:250px;padding: 0;margin: 0;">
+                                    <a data-toggle="tooltip" title="{text:link one}" href="{text:link one url}" style="font-weight:bold;text-decoration:none;"><div style="height:22px;background:{color:link button};border:3px outset {color:link button};padding:5px;text-shadow: -1px 0  #0000FF, 0 1px  #0000FF, 1px 0  #0000FF, 0 -1px  #0000FF;color:white;">{text:link one}</div></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+        
+            <div id="sidebar-left">
+                <div style="height:100%;overflow:hidden;">
+                    {text:left sidebar content}
+                </div>    
+            </div>
+            
+            <div id="post-container">
+                <div id="pc">
+                {block:Posts} 
+                    <div class="post">
+                        <div class="posts" post-type="{PostType}">
+                        
+                            <!-- -- -- Images -- -- -->
+ 
+                            {block:Photo}
+                               {LinkOpenTag}
+                                   <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                                {LinkCloseTag}
+                                {block:Caption}
+                                    {Caption}
+                                {/block:Caption}
+                            {/block:Photo}
+                                
+                            {block:Photoset}
+                            <div class="media">{Photoset}</div>
+                                {block:Caption}
+                                    <div class="caption">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            {/block:Photoset}
+                            
+                            <!-- -- -- text posts -- -- -->
+ 
+                            {block:Text}
+                                {block:Title}
+                                    <div class="title">{Title}</div>
+                                {/block:Title}
+                                {Body}
+                            {/block:Text}
+                            
+                            {block:Chat}
+                                {block:Title}
+                                    <div class="title">
+                                        <h3><a href="{Permalink}">{Title}</a></h3></div>
+                                {/block:Title}
+                                {block:Lines}
+                                    <div class="{Alt} user_{UserNumber}">
+                                        {block:Label}
+                                            <span class="label">{Label}</span>
+                                        {/block:Label}
+                                        {Line}
+                                    </div>
+                                {/block:Lines}
+                            {/block:Chat}
+ 
+                            {block:Quote}
+                                <div class="quote">
+                                    "{Quote}"
+                                {block:Source}
+                                    <div class="source">
+                                        - <i>{Source}</i>
+                                    </div>
+                                {/block:Source}
+                                </div>
+                            {/block:Quote}    
+ 
+                            {block:Link}
+                                <a href="{URL}" class="link" {Target}>
+                                    {Name}
+                                </a>
+                                
+                                {block:Description}
+                                    {Description}
+                                {/block:Description}
+                            {/block:Link}
+                            
+                            <!-- -- -- audio & video -- -- -->
+ 
+                            {block:Video}
+                                {Video-500}
+                                {block:Caption}
+                                    {Caption}
+                                {/block:Caption}
+                            {/block:Video}
+ 
+                            {block:Audio}
+                                <div id= "audioplayer">{AudioPlayerWhite}</div>
+                                {block:AlbumArt}
+                                    <div id="albumart">
+                                        <img src="{AlbumArtURL}" width="100">  
+                                    </div>
+                                {/block:AlbumArt}
+                                    <div class="trackstuff">
+                                        {block:TrackName}
+                                            <b><i>{TrackName}</i></b>
+                                        {/block:TrackName}
+                                        <br>{block:Artist}
+                                            <i>{Artist}</i>
+                                        {/block:Artist}
+                                    </div>
+                                {Caption}
+                            {/block:Audio} 
+                            
+                            <!-- -- -- asks -- -- -->
+ 
+                            {block:Answer}
+                                <div class="question">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img src="{AskerPortraitURL-128}" style="display:block;border-radius:15px;">
+                                                </td>                    
+                                                <td style="width:300px;"><div class="bubble">
+                                                    <div class="asker">{Asker}</div>  
+                                                        {Question}
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="caption">
+                                    {Answer}
+                                </div>
+                            {/block:Answer}
+                            
+                            <!-- -- -- Footer -- -- -->
+
+                            
+                            {block:Date}
+                                <div class="footer">
+    
+                                    <table style="width:100%;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:auto;">
+                                                    <a data-toggle="tooltip" title="{NoteCountWithLabel}" href="{Permalink}">  
+                                                        {block:NoteCount}
+                                                            {NoteCountWithLabel}
+                                                        {/block:NoteCount}
+                                                    </a>
+                                                </td>
+                            
+                                                <td style="width:auto;text-align:right;">
+                                                    <a data-toggle="tooltip" title="{TimeAgo}" href="{Permalink}">  
+                                                        {ShortMonth} {DayOfMonthWithZero}, {12HourWithZero}:{Minutes} {CapitalAmPm}
+                                                    </a>    
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>    
+                
+                                    {block:HasTags}
+                                        <div class="tags" style="text-align:left;">
+                                            {block:Tags}
+                                                #<a data-toggle="tooltip" title="#{Tag}" href="{TagURL}">{Tag}</a>
+                                            {/block:Tags}
+                                        </div>    
+                                    {/block:HasTags} 
+            
+                                    {block:PermalinkPage}
+                                        <div class="notes">
+                                            {block:PostNotes}
+                                                {PostNotes}
+                                            {/block:PostNotes}
+                                        </div>    
+                                    {/block:PermalinkPage}
+                                    <!--{block:NoRebloggedFrom}{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}{/block:NoRebloggedFrom} --> 
+                                </div>
+                            {/block:Date}
+                        
+                        </div>
+                    </div>    
+                {/block:Posts}
+                </div>
+            </div>
+            
+            <div id="sidebar-right">
+                {text:right sidebar content}    
+            </div>
+            
+        </div>
+        
+    <div id="c">
+        <a href="https://cloverparty.tumblr.com/tagged/mine" data-toggle="tooltip" title="Theme by Mochizuki Hajime" style="text-decoration:none;font-family:apricot;text-shadow: -2px 0  white, 0 2px  white, 2px 0  white, 0 -2px  white;">★</a>
+    </div>        
+        
+    </body>
+    </html>     
