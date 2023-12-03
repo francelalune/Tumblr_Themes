@@ -76,9 +76,11 @@
     <meta name="color:tooltip text" content="">
     
     <meta name="color:link button" content="">
+    <meta name="color:link button link" content="">
     <meta name="color:link button link border" content="">
     
     <meta name="color:link button hover" content="">
+    <meta name="color:link button link hover" content="">
     <meta name="color:link button link border hover" content="">
     
     <meta name="color:cursor sparkles" content="#fff">
@@ -107,9 +109,10 @@
     <meta name="if:redirect">
     <meta name="if:full background" content="">
     <meta name="if:content shadow" content="">
+    <meta name="if:350px content" content="">
+    <meta name="if:400px content" content="true">
+    <meta name="if:500px content" content="">
     <meta name="if:round content" content="">
-    <meta name="if:pastel rainbow links" content=""> 
-    <meta name="if:bright rainbow links" content=""> 
     <meta name="if:bold links" content="">
     <meta name="if:round images" content="">
     <meta name="if:link underline" content="">
@@ -982,40 +985,6 @@ function createDiv(height, width) {
     a{
         color:{color:link};
         text-decoration:none;
-{block:ifpastelrainbowlinks}
-        -webkit-text-stroke: 0.5px {color:rainbow link outline};
-        text-decoration: none;
-        color: white;
-        display: inline-block;
-        background-size: 120% 100%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent;
-        -ms-background-clip: text;
-        -ms-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-        transition: all 0.15s cubic-bezier(0.68, -0.25, 0.265, 1.25);
-        background-image: linear-gradient(45deg, #f393fe, #ce93ff, #909cff, #8fd4ff, #90ffef, #93ff92, #e0fe93, #fde091, #ffba91, #ff939c, #fe92dc);
-        {/block:ifpastelrainbowlinks};
-        {block:ifbrightrainbowlinks};
-        -webkit-text-stroke: 0.5px {color:rainbow link outline};
-        text-decoration: none;
-        color: white;
-        display: inline-block;
-        background-size: 120% 100%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent;
-        -ms-background-clip: text;
-        -ms-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-        transition: all 0.15s cubic-bezier(0.68, -0.25, 0.265, 1.25);
-        background-image: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080);
-        {/block:ifbrightrainbowlinks};
         {block:ifboldlinks}
         font-weight:bold;
         {/block:ifboldlinks}      
@@ -1141,11 +1110,30 @@ function createDiv(height, width) {
     }
     /* . . . . . . . . . . . . . . . */         
     #pc{
+        {block:if350pxcontent}
+        margin-left:100px;
+        width:350px;
+        {/block:if350pxcontent}
+        {block:if400pxcontent}
+        width:400px;
         margin-left:80px;
+        {/block:if400pxcontent}
+        {block:if500pxcontent}
+        width:500px;
+        margin-left:30px;
+        {/block:if500pxcontent};
     }
     /* . . . . . . . . . . . . . . . */       
     .post{
+        {block:if350pxcontent}
+        width:350px;
+        {/block:if350pxcontent}
+        {block:if400pxcontent}
         width:400px;
+        {/block:if400pxcontent}
+        {block:if500pxcontent}
+        width:500px;
+        {/block:if500pxcontent};
         padding:5px;
         border:{text:content border size}px {select:content border} {color:content border};
         margin:10px 0 20px 0;
@@ -1304,6 +1292,7 @@ text-shadow: -1px 0  {color:footer link border hover}, 0 1px  {color:footer link
         border-top:1px {select:container border} {color:container border};
         border-left:1px {select:container border} {color:container border};
         border-right:1px {select:container border} {color:container border};
+        background-color:{color:sidebar};
         border-bottom:none;
         object-fit: fill;
         background-position: {text:header horizontal position}% {text:header vertical position}%; 
@@ -1380,6 +1369,10 @@ text-shadow: -1px 0  {color:footer link border hover}, 0 1px  {color:footer link
     }
     {/block:ifimagegrayscaleonhover}    
     
+    #buttons:hover{
+        background-color:blue;
+    }
+    
     {CustomCss}
     </style>
     </head>
@@ -1395,16 +1388,16 @@ text-shadow: -1px 0  {color:footer link border hover}, 0 1px  {color:footer link
                         <tbody>
                             <tr style="text-align:center;">
                                 <td style="width:250px;padding: 0;margin: 0;">
-                                    <a data-toggle="tooltip" title="{lang:Home}" href="/" style="font-weight:bold;text-decoration:none;"><div style="height:22px;background:{color:link button};border:3px outset {color:link button};padding:5px;text-shadow: -1px 0  {color:link button link border}, 0 1px  {color:link button link border}, 1px 0  {color:link button link border}, 0 -1px  {color:link button link border};color:white;">{lang:Home}</div></a>
+                                    <a data-toggle="tooltip" title="{lang:Home}" href="/" style="font-weight:bold;text-decoration:none;"><div id="buttons" style="height:22px;background:{color:link button};border:3px outset {color:link button};padding:5px;text-shadow: -1px 0  {color:link button link border}, 0 1px  {color:link button link border}, 1px 0  {color:link button link border}, 0 -1px  {color:link button link border};color:{color:link button link}">{lang:Home}</div></a>
                                 </td>
                                 <td style="width:250px;padding: 0;margin: 0;">
-                                    <a data-toggle="tooltip" title="{AskLabel}" href="/ask" style="font-weight:bold;text-decoration:none;"><div style="height:22px;padding:5px;background:{color:link button};border:3px outset {color:link button};text-shadow: -1px 0  #0000FF, 0 1px  #0000FF, 1px 0  #0000FF, 0 -1px  #0000FF;color:white;">{AskLabel}</div></a>
+                                    <a data-toggle="tooltip" title="{AskLabel}" href="/ask" style="font-weight:bold;text-decoration:none;"><div id="button" style="height:22px;padding:5px;background:{color:link button};border:3px outset {color:link button};text-shadow: -1px 0  {color:link button link border}, 0 1px  {color:link button link border}, 1px 0  {color:link button link border}, 0 -1px  {color:link button link border};color:{color:link button link};">{AskLabel}</div></a>
                                 </td>
                                 <td style="width:250px;padding: 0;margin: 0;">
-                                   <a data-toggle="tooltip" title="{lang:Archive}" href="/archive" style="font-weight:bold;text-decoration:none;"><div style="height:22px;background:{color:link button};border:3px outset {color:link button};padding:5px;text-shadow: -1px 0  #0000FF, 0 1px  #0000FF, 1px 0  #0000FF, 0 -1px  #0000FF;color:white;">{lang:Archive}</div></a>
+                                   <a data-toggle="tooltip" title="{lang:Archive}" href="/archive" style="font-weight:bold;text-decoration:none;"><div id="button" style="height:22px;background:{color:link button};border:3px outset {color:link button};padding:5px;text-shadow: -1px 0  {color:link button link border}, 0 1px  {color:link button link border}, 1px 0  {color:link button link border}, 0 -1px  {color:link button link border};color:{color:link button link};">{lang:Archive}</div></a>
                                 </td>
                                 <td style="width:250px;padding: 0;margin: 0;">
-                                    <a data-toggle="tooltip" title="{text:link one}" href="{text:link one url}" style="font-weight:bold;text-decoration:none;"><div style="height:22px;background:{color:link button};border:3px outset {color:link button};padding:5px;text-shadow: -1px 0  #0000FF, 0 1px  #0000FF, 1px 0  #0000FF, 0 -1px  #0000FF;color:white;">{text:link one}</div></a>
+                                    <a data-toggle="tooltip" title="{text:link one}" href="{text:link one url}" style="font-weight:bold;text-decoration:none;"><div id="button" style="height:22px;background:{color:link button};border:3px outset {color:link button};padding:5px;text-shadow: -1px 0  {color:link button link border}, 0 1px  {color:link button link border}, 1px 0  {color:link button link border}, 0 -1px  {color:link button link border};color:{color:link button link};">{text:link one}</div></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -1597,6 +1590,24 @@ text-shadow: -1px 0  {color:footer link border hover}, 0 1px  {color:footer link
             </div>
             
         </div>
+        
+        <div class="nav">
+                {block:Pagination}
+                    <center>
+                    <div style="width:180px;position:fixed;bottom:11px;left:0px;font-size:25px;">
+                        {block:PreviousPage}
+                            <a href="{PreviousPage}">&#10094; {lang:Previous}</a> 
+                        {/block:PreviousPage}
+                    </div>    
+                    <div style="width:180px;position:fixed;bottom:11px;right:0px;font-size:25px;">        
+                        {block:NextPage}
+                            <a href="{NextPage}">{lang:Next} &#10095;</a>
+                        {/block:NextPage}
+                    </div>    
+                    </center>
+                {/block:Pagination}
+        </div>
+        
         
     <div id="c">
         <a href="https://cloverparty.tumblr.com/tagged/mine" data-toggle="tooltip" title="Theme by Mochizuki Hajime" style="text-decoration:none;font-family:apricot;text-shadow: -2px 0  white, 0 2px  white, 2px 0  white, 0 -2px  white;">★</a>
