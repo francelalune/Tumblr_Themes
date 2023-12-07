@@ -5,7 +5,7 @@
     
     // Beanie Tumblr theme by Mochizuki Hajime
     // Theme Version 1.0.1
-    // Published 12/1/23, last updated 12/1/23
+    // Published 12/7/23, last updated 12/7/23
     // Made for Cody 
     
         -------------------------------
@@ -35,6 +35,7 @@
             c. <text style="color:blue;">text</text> to customize text style.
             d. <center>text</center> to center content.
             e. <p> for page break, <br> for line break
+        2. You *must* have one of the "container border size" toggles on or else it will break the sidebars. If you don't want borders,  choose the "none" option in the container border selection while keeping one of the border sizes on.
         
     ----------------------------------->
     
@@ -49,7 +50,9 @@
     <meta name="color:link" content="">
     <meta name="color:link hover" content="">
     <meta name="color:link shadow" content="">
+    <meta name="color:link shadow hover" content="">
     <meta name="color:link border" content="">    
+    <meta name="color:link border hover" content="">
     
     <meta name="color:sidebar" content="">
     <meta name="color:content" content="">
@@ -64,6 +67,7 @@
     <meta name="color:footer text" content="">
     <meta name="color:footer link hover" content="">
     <meta name="color:footer link shadow" content="">
+    <meta name="color:footer link shadow hover" content="">    
     <meta name="color:footer link border" content="">
     <meta name="color:footer link border hover" content="">
     
@@ -76,12 +80,13 @@
     <meta name="color:tooltip text" content="">
     
     <meta name="color:link button" content="">
+    <meta name="color:link button hover" content="">    
     <meta name="color:link button link" content="">
-    <meta name="color:link button link border" content="">
-    
-    <meta name="color:link button hover" content="">
     <meta name="color:link button link hover" content="">
+    <meta name="color:link button link border" content="">
     <meta name="color:link button link border hover" content="">
+    <meta name="color:link button link shadow" content="">
+    <meta name="color:link button link shadow hover" content="">
     
     <meta name="color:cursor sparkles" content="#fff">
     <meta name="color:cursor floaties 1" content="">
@@ -95,6 +100,8 @@
      
     <meta name="image:favicon" content="">
     <meta name="image:background" content="">
+    <meta name="image:content" content="">
+    <meta name="image:sidebars" content="">
     <meta name="image:content container" content="">
     <meta name="image:header" content="">
     <meta name="image:cursor" content="">
@@ -109,6 +116,7 @@
     <meta name="if:redirect">
     <meta name="if:full background" content="">
     <meta name="if:content shadow" content="">
+    <meta name="if:content transparency" content="">
     <meta name="if:350px content" content="">
     <meta name="if:400px content" content="true">
     <meta name="if:500px content" content="">
@@ -130,6 +138,10 @@
     <meta name="if:image hue shift on hover" content="">
     <meta name="if:image grayscale on hover" content="">
     
+    <meta name="if:container border size 1" content="true">
+    <meta name="if:container border size 2" content="">
+    <meta name="if:container border size 3" content="">
+    
     <!--*******************************
                     Text
      *******************************-->
@@ -137,6 +149,8 @@
      <meta name="text:header vertical position" content="50">
      <meta name="text:header horizontal position" content="50">
      <meta name="text:content border size" content="1">
+     
+     <meta name="text:content transparency" content="0.7">
      
      <meta name="text:left sidebar content" content="This is the left sidebar, you can put whatever you want here, read the information at the top of the code to learn how to input images, style images and text, and others...">
      <meta name="text:right sidebar content" content="">
@@ -967,7 +981,10 @@ function createDiv(height, width) {
     
     body{
         font-family:arial;
+        overflow-y:hidden;
+        overflow-x:hidden;
         background-image:url({image:background});
+        background-color:{color:background};
         {block:iffullbackground} 
         background-size: cover;
         {/block:iffullbackground}
@@ -1007,6 +1024,12 @@ function createDiv(height, width) {
     /* . . . . . . . . . . . . . . . */         
     a:hover{
         color:{color:link hover};
+        {block:iflinkshadow}
+        text-shadow: 1px 1px 3px {color:link shadow hover}, 0 0 1em {color:link shadow hover}, 0 0 0.2em {color:link shadow hover};
+        {/block:iflinkshadow}    
+        {block:iflinkborders}
+        text-shadow: -1px 0  {color:link border hover}, 0 1px  {color:link border hover}, 1px 0  {color:link border hover}, 0 -1px  {color:link border hover};
+        {/block:iflinkborders}  
     }
     /* . . . . . . . . . . . . . . . */     
     @font-face {
@@ -1087,9 +1110,17 @@ function createDiv(height, width) {
     *********************************/
     
     #container{
+        {block:ifcontainerbordersize1}
         width:1000px;
-        height:615px;
-        margin-top:3px;
+        {/block:ifcontainerbordersize1}
+        {block:ifcontainerbordersize2}
+        width:1004px;
+        {/block:ifcontainerbordersize2}
+        {block:ifcontainerbordersize3}
+        width:1008px;
+        {/block:ifcontainerbordersize3}
+        height:620px;
+        margin-top:35px;
         position:absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -1100,13 +1131,27 @@ function createDiv(height, width) {
         float:left;
         overflow-y:auto;
         border-top:none;
+        {block:ifcontainerbordersize1}
+        width:576px;
         border-left:1px {select:container border} {color:container border};
         border-right:1px {select:container border} {color:container border};
         border-bottom:1px {select:container border} {color:container border};
+        {block:ifcontainerbordersize1}
+        {block:ifcontainerbordersize2}
+        border-left:2px {select:container border} {color:container border};
+        border-right:2px {select:container border} {color:container border};
+        border-bottom:2px {select:container border} {color:container border};
+        width:574px;
+        {block:ifcontainerbordersize2}
+        {block:ifcontainerbordersize3}
+        border-left:3px {select:container border} {color:container border};
+        border-right:3px {select:container border} {color:container border};
+        border-bottom:3px {select:container border} {color:container border};
+        width:572px;
+        {block:ifcontainerbordersize3}
         background-color:{color:content container};
         background-image:url({image:content container});
-        width:576px;
-        height:456px;
+        height:430px;
     }
     /* . . . . . . . . . . . . . . . */         
     #pc{
@@ -1144,6 +1189,10 @@ function createDiv(height, width) {
         {block:ifroundcontent}
         border-radius:10px;
         {/block:ifroundcontent}
+        background-image:url('{image:content}');
+        {block:ifcontenttransparency}
+        background-color:rgba({RGBcolor:content}, {text:content transparency});
+        {/block:ifcontenttransparency}
     }
     /* . . . . . . . . . . . . . . . */        
     .post img{
@@ -1273,7 +1322,7 @@ text-shadow: -1px 0  {color:footer link border}, 0 1px  {color:footer link borde
     .footer a:hover{
         color:{color:footer link hover};
         {block:iftextshadow}
-        text-shadow: 1px 1px 3px {color:footer link shadow}, 0 0 1em {color:footer link shadow}, 0 0 0.2em {color:footer link shadow};
+        text-shadow: 1px 1px 3px {color:footer link shadow hover}, 0 0 1em {color:footer link shadow hover}, 0 0 0.2em {color:footer link shadow hover};
         {/block:iftextshadow}
         {block:iflinkborders}
 text-shadow: -1px 0  {color:footer link border hover}, 0 1px  {color:footer link border hover}, 1px 0  {color:footer link border hover}, 0 -1px  {color:footer link border hover};
@@ -1289,11 +1338,24 @@ text-shadow: -1px 0  {color:footer link border hover}, 0 1px  {color:footer link
     #header-container{
         width:998px;
         height:155px;
+        border-bottom:none;
+        {block:ifcontainerbordersize1}        
         border-top:1px {select:container border} {color:container border};
         border-left:1px {select:container border} {color:container border};
         border-right:1px {select:container border} {color:container border};
+        {block:ifcontainerbordersize1}
+        {block:ifcontainerbordersize2}        
+        border-top:2px {select:container border} {color:container border};
+        border-left:2px {select:container border} {color:container border};
+        border-right:2px {select:container border} {color:container border};
+        {block:ifcontainerbordersize2}
+        {block:ifcontainerbordersize3}        
+        border-top:3px {select:container border} {color:container border};
+        border-left:3px {select:container border} {color:container border};
+        border-right:3px {select:container border} {color:container border};
+        {block:ifcontainerbordersize3}        
         background-color:{color:sidebar};
-        border-bottom:none;
+
         object-fit: fill;
         background-position: {text:header horizontal position}% {text:header vertical position}%; 
         background-image:url('{image:header}');
@@ -1302,28 +1364,75 @@ text-shadow: -1px 0  {color:footer link border hover}, 0 1px  {color:footer link
     #sidebar-left{
         float:left;
         border-top:none;
-        border-left:1px {select:container border} {color:container border};
-        background-color:{color:sidebar};
-        border-bottom:1px {select:container border} {color:container border};
         border-right:none;
+        {block:ifcontainerbordersize1}
+        border-left:1px {select:container border} {color:container border};
+        border-bottom:1px {select:container border} {color:container border};
+        {block:ifcontainerbordersize1}
+        {block:ifcontainerbordersize2}
+        border-left:2px {select:container border} {color:container border};
+        border-bottom:2px {select:container border} {color:container border};
+        {block:ifcontainerbordersize2}
+        {block:ifcontainerbordersize3}
+        border-left:3px {select:container border} {color:container border};
+        border-bottom:3px {select:container border} {color:container border};        
+        {block:ifcontainerbordersize3}        
+        background-color:{color:sidebar};
+        background-image:url('{image:sidebars}');
         padding:5px;
         width:200px;
         overflow:hidden;
-        height:446px;
+        height:420px;
     }
     /* . . . . . . . . . . . . . . . */  
     #sidebar-right{
         float:left;
         border-top:none;
-        border-right:1px {select:container border} {color:container border};
         border-left:none;
+        {block:ifcontainerbordersize1}
+        border-right:1px {select:container border} {color:container border};
         border-bottom:1px {select:container border} {color:container border};
+        {block:ifcontainerbordersize1}
+        {block:ifcontainerbordersize2}
+        border-right:2px {select:container border} {color:container border};
+        border-bottom:2px {select:container border} {color:container border};
+        {block:ifcontainerbordersize2}    
+        {block:ifcontainerbordersize3}
+        border-right:3px {select:container border} {color:container border};
+        border-bottom:3px {select:container border} {color:container border};
+        {block:ifcontainerbordersize3}
         padding:5px;
         overflow:hidden;
         background-color:{color:sidebar};
+        background-image:url('{image:sidebars}');
         width:200px;
-        height:446px;
+        height:420px;
     }
+    /* . . . . . . . . . . . . . . . */      
+    #header-links{
+        height:22px;
+        background:{color:link button};
+        color:{color:link button link};
+        border:3px outset {color:link button};
+        padding:5px;
+    }
+    /* . . . . . . . . . . . . . . . */      
+    #header-links:hover{
+        background:{color:link button hover};
+        color:{color:link button link hover};
+        border:3px outset {color:link button hover};
+    }
+    /* . . . . . . . . . . . . . . . */      
+    #header-links a{
+        font-weight:bold;
+        text-decoration:none;
+        text-shadow: -1px 0  {color:link button link border}, 0 1px  {color:link button link border}, 1px 0  {color:link button link border}, 0 -1px  {color:link button link border};
+    }    
+    /* . . . . . . . . . . . . . . . */          
+    #header-links a:hover{
+        text-shadow: -1px 0  {color:link button link border}, 0 1px  {color:link button link border}, 1px 0  {color:link button link border}, 0 -1px  {color:link button link border};          
+    }
+    
     
     /*********************************
         
@@ -1369,10 +1478,6 @@ text-shadow: -1px 0  {color:footer link border hover}, 0 1px  {color:footer link
     }
     {/block:ifimagegrayscaleonhover}    
     
-    #buttons:hover{
-        background-color:blue;
-    }
-    
     {CustomCss}
     </style>
     </head>
@@ -1388,16 +1493,16 @@ text-shadow: -1px 0  {color:footer link border hover}, 0 1px  {color:footer link
                         <tbody>
                             <tr style="text-align:center;">
                                 <td style="width:250px;padding: 0;margin: 0;">
-                                    <a data-toggle="tooltip" title="{lang:Home}" href="/" style="font-weight:bold;text-decoration:none;"><div id="buttons" style="height:22px;background:{color:link button};border:3px outset {color:link button};padding:5px;text-shadow: -1px 0  {color:link button link border}, 0 1px  {color:link button link border}, 1px 0  {color:link button link border}, 0 -1px  {color:link button link border};color:{color:link button link}">{lang:Home}</div></a>
+                                    <a data-toggle="tooltip" title="{lang:Home}" href="/"><div id="header-links">{lang:Home}</div></a>
                                 </td>
                                 <td style="width:250px;padding: 0;margin: 0;">
-                                    <a data-toggle="tooltip" title="{AskLabel}" href="/ask" style="font-weight:bold;text-decoration:none;"><div id="button" style="height:22px;padding:5px;background:{color:link button};border:3px outset {color:link button};text-shadow: -1px 0  {color:link button link border}, 0 1px  {color:link button link border}, 1px 0  {color:link button link border}, 0 -1px  {color:link button link border};color:{color:link button link};">{AskLabel}</div></a>
+                                    <a data-toggle="tooltip" title="{AskLabel}" href="/ask"><div id="header-links">{AskLabel}</div></a>
                                 </td>
                                 <td style="width:250px;padding: 0;margin: 0;">
-                                   <a data-toggle="tooltip" title="{lang:Archive}" href="/archive" style="font-weight:bold;text-decoration:none;"><div id="button" style="height:22px;background:{color:link button};border:3px outset {color:link button};padding:5px;text-shadow: -1px 0  {color:link button link border}, 0 1px  {color:link button link border}, 1px 0  {color:link button link border}, 0 -1px  {color:link button link border};color:{color:link button link};">{lang:Archive}</div></a>
+                                    <a data-toggle="tooltip" title="{lang:Archive}" href="/archive"><div id="header-links">{lang:Archive}</div></a>
                                 </td>
                                 <td style="width:250px;padding: 0;margin: 0;">
-                                    <a data-toggle="tooltip" title="{text:link one}" href="{text:link one url}" style="font-weight:bold;text-decoration:none;"><div id="button" style="height:22px;background:{color:link button};border:3px outset {color:link button};padding:5px;text-shadow: -1px 0  {color:link button link border}, 0 1px  {color:link button link border}, 1px 0  {color:link button link border}, 0 -1px  {color:link button link border};color:{color:link button link};">{text:link one}</div></a>
+                                    <a data-toggle="tooltip" title="{text:link one}" href="{text:link one url}"><div id="header-links">{text:link one}</div></a>
                                 </td>
                             </tr>
                         </tbody>
