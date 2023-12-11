@@ -980,7 +980,6 @@ function createDiv(height, width) {
     *********************************/
     
     body{
-        font-family:arial;
         overflow-y:hidden;
         overflow-x:hidden;
         background-image:url({image:background});
