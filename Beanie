@@ -4,8 +4,8 @@
     <!--
     
     // Beanie Tumblr theme by Mochizuki Hajime
-    // Theme Version 1.0.1
-    // Published 12/10/23, last updated 12/10/23
+    // Theme Version 1.0.2
+    // Published 12/10/23, last updated 1/20/24
     // Made for Cody 
     
         -------------------------------
@@ -63,6 +63,7 @@
     <meta name="color:container border" content="">
      
     <meta name="color:footer" content="">
+    <meta name="color:footer border" content="">
     <meta name="color:footer link" content="">
     <meta name="color:footer text" content="">
     <meta name="color:footer link hover" content="">
@@ -117,6 +118,7 @@
     <meta name="if:full background" content="">
     <meta name="if:content shadow" content="">
     <meta name="if:content transparency" content="">
+    <meta name="if:footer transparency" content="">
     <meta name="if:350px content" content="">
     <meta name="if:400px content" content="true">
     <meta name="if:500px content" content="">
@@ -149,8 +151,10 @@
      <meta name="text:header vertical position" content="50">
      <meta name="text:header horizontal position" content="50">
      <meta name="text:content border size" content="1">
+     <meta name="text:footer border size" content="1">
      
      <meta name="text:content transparency" content="0.7">
+     <meta name="text:footer transparency" content="0">
      
      <meta name="text:left sidebar content" content="This is the left sidebar, you can put whatever you want here, read the information at the top of the code to learn how to input images, style images and text, and others...">
      <meta name="text:right sidebar content" content="">
@@ -189,6 +193,15 @@
     <meta name="select:container border" content="outset">
     <meta name="select:container border" content="ridge">
     <meta name="select:container border" content="none"> 
+    
+    <meta name="select:footer border" content="solid">
+    <meta name="select:footer border" content="dotted">
+    <meta name="select:footer border" content="dashed">
+    <meta name="select:footer border" content="double">
+    <meta name="select:footer border" content="inset">
+    <meta name="select:footer border" content="outset">
+    <meta name="select:footer border" content="ridge">
+    <meta name="select:footer border" content="none">
     
 
     
@@ -1300,6 +1313,10 @@ function createDiv(height, width) {
         padding:10px;
         color:{color:footer text};
         background-color:{color:footer};
+        border:{text:footer border size}px {select:footer border} {color:footer border};
+        {block:iffootertransparency}
+        background-color:rgba({RGBcolor:footer}, {text:footer transparency});
+        {/block:iffootertransparency}
         {block:ifroundcontent}
         border-radius:10px;
         {/block:ifroundcontent}
