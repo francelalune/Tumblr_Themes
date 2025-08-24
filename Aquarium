@@ -1,0 +1,892 @@
+    <!DOCTYPE HTML>
+    <head>
+    <meta charset="utf-8" />
+    <!--
+    
+    // 1. Aquarium Tumblr theme by Mochizuki Hajime
+    // Theme Version 1.0
+    // Published 08.24.25 and last edited 08.24.25
+    
+    
+    // Credit to glenthemes - blockquote, photo, audio JS
+    // The theme was made to be used with small text. Some things may not look as intended if text size is considerably increased. 
+   // The theme looks a little different in the editor - it looks entirely normal when viewed live!
+    
+    
+    -->
+    
+    <!--*******************************
+                   Colors
+    *******************************-->   
+    
+    <meta name="color:background" content="">
+    
+    <meta name="color:text" content="">    
+    <meta name="color:link" content="">
+    <meta name="color:link shadow" content="">
+    <meta name="color:link background" content="">   
+    <meta name="color:link hover" content="">
+    <meta name="color:link background hover" content="">    
+    
+    <meta name="color:content" content="">
+    <meta name="color:content shadow" content="">
+    <meta name="color:content glow" content="">
+
+    <meta name="color:ask" content="#eff3ff">
+
+    <meta name="color:footer" content="">
+    <meta name="color:footer link" content="#604e7d">
+    
+    <meta name="color:cursor sparkles" content="#fff">
+    
+
+
+    
+    <!--*******************************
+                   Images
+    *******************************-->
+    <meta name="image:favicon" content="">
+    <meta name="image:background" content="">
+    <meta name="image:sidebar icon" content="">
+    <meta name="image:cursor" content="">
+    <meta name="image:cursor link" content="">
+    
+    <meta name="image:link one" content="">
+    <meta name="image:link two" content="">
+    <meta name="image:link three" content="">
+    
+    <!--*******************************
+                   Text
+    *******************************-->    
+    <meta name="text:description" content="I'm a description!">
+    
+    <meta name="text:link three" content="link three">
+    <meta name="text:link three url" content="/">
+    
+    
+    <!--*******************************
+                  Options
+    *******************************-->
+    <meta name="if:full background" content="">    
+    <meta name="if:fixed background" content="">    
+    <meta name="if:content shadow" content="">
+    <meta name="if:content glow" content="">
+    
+    <meta name="if:link underline" content="">
+    <meta name="if:link shadow" content="">    
+    
+    <meta name="if:heart icon" content="">    
+    <meta name="if:circle icon" content="">    
+    <meta name="if:image links" content="">
+    <meta name="if:searchbar" content="">
+
+    <meta name="if:custom cursor" content="">
+    <meta name="if:cursor sparkles" content="">
+    
+    <!--*******************************
+                   JS/DOCs
+    *******************************-->
+    
+{block:ifcursorsparkles}
+<script type="text/javascript">
+// <![CDATA[
+var colour="{color:cursor sparkles}"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+var sparkles=50;
+
+/****************************
+*  Tinkerbell Magic Sparkle *
+*(c)2005-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var tiny=new Array();
+var star=new Array();
+var starv=new Array();
+var starx=new Array();
+var stary=new Array();
+var tinyx=new Array();
+var tinyy=new Array();
+var tinyv=new Array();
+
+window.onload=function() { if (document.getElementById) {
+  var i, rats, rlef, rdow;
+  for (var i=0; i<sparkles; i++) {
+    var rats=createDiv(3, 3);
+    rats.style.visibility="hidden";
+    rats.style.zIndex="999";
+    document.body.appendChild(tiny[i]=rats);
+    starv[i]=0;
+    tinyv[i]=0;
+    var rats=createDiv(5, 5);
+    rats.style.backgroundColor="transparent";
+    rats.style.visibility="hidden";
+    rats.style.zIndex="999";
+    var rlef=createDiv(1, 5);
+    var rdow=createDiv(5, 1);
+    rats.appendChild(rlef);
+    rats.appendChild(rdow);
+    rlef.style.top="2px";
+    rlef.style.left="0px";
+    rdow.style.top="0px";
+    rdow.style.left="2px";
+    document.body.appendChild(star[i]=rats);
+  }
+  set_width();
+  sparkle();
+}}
+
+function sparkle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<sparkles; c++) if (!starv[c]) {
+      star[c].style.left=(starx[c]=x)+"px";
+      star[c].style.top=(stary[c]=y+1)+"px";
+      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+      star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
+      star[c].style.visibility="visible";
+      starv[c]=50;
+      break;
+    }
+  }
+  for (c=0; c<sparkles; c++) {
+    if (starv[c]) update_star(c);
+    if (tinyv[c]) update_tiny(c);
+  }
+  setTimeout("sparkle()", 40);
+}
+
+function update_star(i) {
+  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+  if (starv[i]) {
+    stary[i]+=1+Math.random()*3;
+    starx[i]+=(i%5-2)/5;
+    if (stary[i]<shigh+sdown) {
+      star[i].style.top=stary[i]+"px";
+      star[i].style.left=starx[i]+"px";
+    }
+    else {
+      star[i].style.visibility="hidden";
+      starv[i]=0;
+      return;
+    }
+  }
+  else {
+    tinyv[i]=50;
+    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+    tiny[i].style.width="2px";
+    tiny[i].style.height="2px";
+    tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
+    star[i].style.visibility="hidden";
+    tiny[i].style.visibility="visible"
+  }
+}
+
+function update_tiny(i) {
+  if (--tinyv[i]==25) {
+    tiny[i].style.width="1px";
+    tiny[i].style.height="1px";
+  }
+  if (tinyv[i]) {
+    tinyy[i]+=1+Math.random()*3;
+    tinyx[i]+=(i%5-2)/5;
+    if (tinyy[i]<shigh+sdown) {
+      tiny[i].style.top=tinyy[i]+"px";
+      tiny[i].style.left=tinyx[i]+"px";
+    }
+    else {
+      tiny[i].style.visibility="hidden";
+      tinyv[i]=0;
+      return;
+    }
+  }
+  else tiny[i].style.visibility="hidden";
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  return (div);
+}
+
+function newColour() {
+  var c=new Array();
+  c[0]=255;
+  c[1]=Math.floor(Math.random()*256);
+  c[2]=Math.floor(Math.random()*(256-c[1]/2));
+  c.sort(function(){return (0.5 - Math.random());});
+  return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
+}
+// ]]>
+</script>
+{/block:ifcursorsparkles}
+    
+    <title>{Title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{image:favicon}">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="//glen-npf-2020.glitch.me/npf-override.css" rel="stylesheet">
+    <script src="//glen-npf-2020.glitch.me/npf-evenize.js"></script>    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+<script src="//tmblr-npf-audio.gitlab.io/s/init.js"></script>
+<link href="//tmblr-npf-audio.gitlab.io/s/base.css" rel="stylesheet">
+<script>
+tumblr_npf_audio({
+    emptyTitleText: "",
+    emptyArtistText: "",
+    emptyAlbumText: "",
+    
+    titleLabel: "",
+    artistLabel: "",
+    albumLabel: ""
+});
+</script>
+<style edit-npf-audio-player>
+.npf-audio-wrapper {
+    --NPF-Audio-Buttons-Size: 1.4rem;
+    --NPF-Audio-Buttons-Color: #555555; /* color of play & pause buttons */
+    --NPF-Audio-Buttons-Spacing: 1.3rem; /* space between buttons and song info */
+    
+    --NPF-Audio-Image-Size: 85px;
+    --NPF-Audio-Image-Spacing: 0px; /* gap between player info and cover image */
+}
+
+.npf-audio-background {
+    background-color: #f2f2f2; /* background color of player (optional) */
+    padding: 1.5rem;
+}
+
+.npf-audio-title-label,
+.npf-audio-artist-label,
+.npf-audio-album-label {
+    font-weight: bold;
+}
+
+.npf-audio-title,
+.npf-audio-artist,
+.npf-audio-album {
+    color: #333333; /* color of audio text (optional) */
+}    
+</style>    
+    
+    
+    
+    <style type="text/css">    
+    
+    
+    
+    
+    /*********************************
+    
+               Document Body
+    
+    *********************************/
+    
+    /* . . . . . . . . . . . . . . . */      
+    body{
+        font-family:ms gothic;
+        color:{color:text};
+        font-size:12.5px;
+        background-image:url({image:background});
+        {block:iffullbackground} 
+        background-size: cover;
+        {/block:iffullbackground}
+        {block:iffixedbackground}
+        background-attachment:fixed;
+        {/block:iffixedbackground}        
+        font-family:{select:font family};
+        color:{color:text};
+        font-size:{text:font size}px;
+        {block:ifcustomcursor}
+        cursor:url("{image:cursor}"), default;
+        {/block:ifcustomcursor}       
+        background-color:{color:background};
+    }
+    /* . . . . . . . . . . . . . . . */  
+    a{
+        text-decoration:none;
+        {block:iflinkunderline}
+        text-decoration:underline;
+        {block:iflinkunderline}
+        {block:iflinkshadow}
+        text-shadow: 1px 1px 3px {color:link shadow}, 0 0 1em {color:link shadow}, 0 0 0.2em {color:link shadow};
+        {/block:iflinkshadow}            
+        background:{color:link background};
+        padding:2px;
+        transition: .45s ease-in-out;    
+    }    
+    /* . . . . . . . . . . . . . . . */      
+    a:hover{
+        color:{color:link hover};
+        background:{color:link background hover}; 
+        {block:ifcustomcursor}
+        cursor:url("{image:cursor link}"), default;
+        {/block:ifcustomcursor}        
+    }
+    /* . . . . . . . . . . . . . . . */  
+    .npf_row {
+        margin: 0 !important;
+    }
+    /* . . . . . . . . . . . . . . . */   
+    blockquote{
+        border-left:1px solid {color:text};
+        padding-left:10px;
+        margin: 15px;
+    }
+    /* . . . . . . . . . . . . . . . */        
+    p{
+        margin:0 0 5px 0;
+        padding:0;
+    }
+    /* . . . . . . . . . . . . . . . */     
+    :root {
+        --NPF-Image-Spacing:4px;
+        --NPF-Bottom-Gap-From-Captions:1em;
+    }    
+    /* . . . . . . . . . . . . . . . */  
+    #s-m-t-tooltip{
+	    max-width: 300px;
+	    z-index: 10;
+	    margin: 24px 14px 7px 12px;
+	    padding:8px;
+	    border-radius:3px;
+        background: white;
+	    color: black;
+	    box-shadow: 0px 0px 5px 5px white;
+    }    
+    /* . . . . . . . . . . . . . . . */ 
+    ::selection{ 
+        color:white;
+        background-color:blue;
+    }    
+    /* . . . . . . . . . . . . . . . */     
+    
+    /*********************************
+        
+                 Sidebar
+    
+    *********************************/
+    
+    /* . . . . . . . . . . . . . . . */      
+    #sidebar{
+        position:fixed;
+        width:150px;
+        z-index:999;
+        margin-top:45px;
+        margin-left:300px;
+        background:{color:content};
+        padding:5px;
+        border-radius:10px;
+        {block:ifcontentshadow}
+        box-shadow: 7px 7px {color:content shadow};
+        {/block:ifcontentshadow}
+        {block:ifcontentglow}
+        box-shadow: 0px 0px 5px 5px {color:content glow};
+        {/block:ifcontentglow}
+        border:3px white ridge;        
+    }
+    /* . . . . . . . . . . . . . . . */     
+    .sidebar-links{
+        text-decoration:none;
+        border-radius:3px;
+        margin:2px 2px 2px 2px;
+        padding:2px;
+    }
+    /* . . . . . . . . . . . . . . . */
+    .search{
+        width:90%;
+        height:13px;
+        padding:5px;
+        color:black;
+        font-family:times;
+        border-radius:5px;
+        margin:0 0 15px 0;
+        font-size:14px;
+        border-top:2px inset white;
+    }
+    
+    /*********************************
+        
+                Content
+    
+    *********************************/  
+    
+    /* . . . . . . . . . . . . . . . */      
+    #content{
+        width:425px;
+        padding:10px;       
+        left: 50%;
+        position:absolute;
+        transform: translateX(-40%);        
+    }    
+    /* . . . . . . . . . . . . . . . */      
+    .post{
+        background-color:white;
+        padding:5px;
+        border-radius:10px;
+        margin:10px 0 30px 0;
+        {block:ifcontentshadow}
+        box-shadow: 10px 10px {color:content shadow};
+        {/block:ifcontentshadow}
+        {block:ifcontentglow}
+        box-shadow: 0px 0px 5px 5px {color:content glow};
+        {/block:ifcontentglow}        
+        border:3px white ridge;
+    }    
+    /* . . . . . . . . . . . . . . . */      
+    video{ 
+        max-width: 100%; 
+        height: auto;
+    } 
+    /* . . . . . . . . . . . . . . . */  
+    p{
+        margin:15px 0 15px 0;
+    }    
+    /* . . . . . . . . . . . . . . . */     
+    img{
+        max-width: 100%; 
+        height: auto;
+    }
+    /* . . . . . . . . . . . . . . . */      
+    .footer{
+        background-color:{color:footer};
+        border-radius:15px;
+        border:1px solid #a5abd1;
+        padding:5px;
+    }
+    /* . . . . . . . . . . . . . . . */      
+    .footer a{
+        color:{color:footer link};
+        background:none;
+    }
+    
+    .question{
+        background:transparent;
+    }    
+    /* . . . . . . . . . . . . . . . */        
+    .bubble {
+        position: relative;
+        margin-left:20px;
+        width:98%;     
+        background:{color:ask};
+        padding:10px;
+        border-radius: 10px;
+        margin-top:5px;
+    }    
+    /* . . . . . . . . . . . . . . . */        
+    .bubble:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        z-index: 1;
+        border-style: solid;
+        border-color: transparent {color:ask};
+        border-width: 20px 20px 20px 0;
+        top: 50%;
+        left: -20px;
+        margin-top: -20px;
+    }    
+    /* . . . . . . . . . . . . . . . */       
+    .asker{
+        margin:0 0 5px 0;
+    }    
+    
+    /* . . . . . . . . . . . . . . . */           
+    ol.notes{
+        list-style-type:none;
+        text-align:left;
+        padding:3px;
+        overflow:auto;
+    }      
+    /* . . . . . . . . . . . . . . . */
+    .title{
+        font-size:30px;
+        margin:5px 0 5px 0;
+    }
+    /* . . . . . . . . . . . . . . . */
+    .jump_page, .current_page, .previous_page, .next_page{
+        margin:10px 15px 10px 15px;
+        padding:5px;
+        {block:ifcontentshadow}
+        box-shadow: none
+        {/block:ifcontentshadow}
+        {block:ifnotcontentshadow}
+        box-shadow: none
+        {/block:ifnotcontentshadow}
+        {block:ifcontentglow}
+        box-shadow: none;
+        {/block:ifcontentglow}   
+        {block:ifnotcontentglow}
+        box-shadow: none;
+        {/block:ifnotcontentglow}              
+    }
+    /* . . . . . . . . . . . . . . . */    
+.jump_page, .current_page, .previous_page, .next_page a{
+        background-color:{color:footer};
+        color:{footer link};
+        padding:5px;
+        border-radius:5px;       
+        margin:10px 15px 10px 15px;
+        {block:ifcontentshadow}
+        box-shadow: none
+        {/block:ifcontentshadow}
+        {block:ifnotcontentshadow}
+        box-shadow: none
+        {/block:ifnotcontentshadow}
+        {block:ifcontentglow}
+        box-shadow: none;
+        {/block:ifcontentglow}   
+        {block:ifnotcontentglow}
+        box-shadow: none;
+        {/block:ifnotcontentglow}          
+    }
+    /* . . . . . . . . . . . . . . . */    
+     .next_page{
+        background-color:{color:footer};
+        color:{footer link};
+        border-radius:5px;        
+    }     
+    /* . . . . . . . . . . . . . . . */    
+    .jump_page{
+        margin:0 15px 0 15px;
+    }
+    /* . . . . . . . . . . . . . . . */
+    #c{
+        bottom:5px;
+        right:5px;
+        font-size:15px;
+        font-weight:bold;
+        position:fixed;
+    }    
+    
+    {CustomCss}
+    </style>
+    </head>
+    <body>    
+
+        <div id="sidebar">
+    
+            <center>
+                <img src="{image:sidebar icon}" style="min-width:85%;max-width:85%;height:auto;display:block;border-radius:10px;margin-top:-30px;{block:ifhearticon}-webkit-mask-image:url(https://files.catbox.moe/4vxnd6.png);-webkit-mask-repeat:no-repeat;-webkit-mask-size:cover;height: 115px; width:100%;{/block:ifhearticon};{block:ifcircleicon}border-radius:100%;{/block:ifcircleicon}">
+        
+                <div style="margin:10px 0 10px 0">
+                    {text:description}
+                </div>
+                
+                {block:ifsearchbar}
+                <form action="/search" method="get">
+                <input class="search" type="text" placeholder="Search..." name="q" value="" style="outline:none;">
+</form>
+                {block:ifsearchbar}
+                
+                
+                <div style="margin:0 0 5px 0">
+                    {block:ifimagelinks}
+                        <a style="background:none;" href="/ask"><img src="{image:link one}"></a>
+                        <a style="background:none;" href="/archive"><img src="{image:link two}"></a>
+                        <a style="background:none;" href="{text:link three url}"><img src="{image:link three}"></a>
+                     {block:ifimagelinks}
+                     {block:ifnotimagelinks}
+                        {block:askenabled}
+                            <a class="sidebar-links" href="/ask">{AskLabel}</a>
+                        {block:askenabled}
+                            <a class="sidebar-links" href="/archive">{lang:Archive}</a>
+                            <a class="sidebar-links" href="{text:link three url}">{text:link three}</a>
+                     {block:ifnotimagelinks}
+                </div>
+    
+            </center>
+        </div>
+                            <div id="wrapper">
+
+                    <div id="content">
+                        {block:Posts} 
+                    <div class="post">
+                        <div class="posts" post-type="{PostType}">
+                        
+                            <!-- -- -- Images -- -- -->
+ 
+                            {block:Photo}
+                               {LinkOpenTag}
+                                   <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                                {LinkCloseTag}
+                                {block:Caption}
+                                    {Caption}
+                                {/block:Caption}
+                            {/block:Photo}
+                                
+                            {block:Photoset}
+                            <div class="media">{Photoset}</div>
+                                {block:Caption}
+                                    <div class="caption">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            {/block:Photoset}
+                            
+                            <!-- -- -- text posts -- -- -->
+ 
+                            {block:Text}
+                                {block:Title}
+                                    <div class="title">{Title}</div>
+                                {/block:Title}
+                                {Body}
+                            {/block:Text}
+                            
+                            {block:Chat}
+                                {block:Title}
+                                    <div class="title">
+                                        <h3><a href="{Permalink}">{Title}</a></h3></div>
+                                {/block:Title}
+                                {block:Lines}
+                                    <div class="{Alt} user_{UserNumber}">
+                                        {block:Label}
+                                            <span class="label">{Label}</span>
+                                        {/block:Label}
+                                        {Line}
+                                    </div>
+                                {/block:Lines}
+                            {/block:Chat}
+ 
+                            {block:Quote}
+                                <div class="quote">
+                                    "{Quote}"
+                                {block:Source}
+                                    <div class="source">
+                                        - <i>{Source}</i>
+                                    </div>
+                                {/block:Source}
+                                </div>
+                            {/block:Quote}    
+ 
+                            {block:Link}
+                                <a href="{URL}" class="link" {Target}>
+                                    {Name}
+                                </a>
+                                
+                                {block:Description}
+                                    {Description}
+                                {/block:Description}
+                            {/block:Link}
+                            
+                            <!-- -- -- audio & video -- -- -->
+ 
+                            {block:Video}
+                                {Video-500}
+                                {block:Caption}
+                                    {Caption}
+                                {/block:Caption}
+                            {/block:Video}
+ 
+                            {block:Audio}
+                                <div id= "audioplayer">{AudioPlayerWhite}</div>
+                                {block:AlbumArt}
+                                    <div id="albumart">
+                                        <img src="{AlbumArtURL}" width="100">  
+                                    </div>
+                                {/block:AlbumArt}
+                                    <div class="trackstuff">
+                                        {block:TrackName}
+                                            <b><i>{TrackName}</i></b>
+                                        {/block:TrackName}
+                                        <br>{block:Artist}
+                                            <i>{Artist}</i>
+                                        {/block:Artist}
+                                    </div>
+                                {Caption}
+                            {/block:Audio} 
+                            
+                            <!-- -- -- asks -- -- -->
+ 
+                            {block:Answer}
+                                <div class="question">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                   <img src="{AskerPortraitURL-64}" style="display:block;border-radius:15px;">
+                                                </td>                    
+                                                <td style="width:300px;"><div class="bubble">
+                                                    <div class="asker">{Asker}</div>  
+                                                        {Question}
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="caption">
+                                    {Answer}
+                                </div>
+                            {/block:Answer}
+                            
+                            <!-- -- -- Footer -- -- -->
+
+                            
+                            {block:Date}
+                                <div class="footer">
+    
+                                    <table style="width:100%;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:auto;">
+                                                    <a data-toggle="tooltip" title="{NoteCountWithLabel}" href="{Permalink}">  
+                                                        {block:NoteCount}
+                                                            {NoteCountWithLabel}
+                                                        {/block:NoteCount}
+                                                    </a>
+                                                </td>
+                            
+                                                <td style="width:auto;text-align:right;">
+                                                    <a data-toggle="tooltip" title="{TimeAgo}" href="{Permalink}">  
+                                                        {ShortMonth} {DayOfMonthWithZero}, {12HourWithZero}:{Minutes} {CapitalAmPm}
+                                                    </a>    
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>    
+                                    
+                                    <hr style="border-bottom:1px dashed #717171;border-top:none;margin:5px;width:97%;">
+                                    
+                                    <table style="width:100%;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:auto;">
+                                                   {block:HasTags}
+                                                   
+                                                   
+                                                   
+                                        <div class="tags" style="text-align:left;"><text style="color:{color:footer link}">tags: 
+                                            {block:Tags}
+                                                +</text><a data-toggle="tooltip" title="#{Tag}" href="{TagURL}">{Tag}</a>
+                                            {/block:Tags}
+                                        </div>    
+                                    {/block:HasTags} 
+                                                </td>
+                            
+                                                <td style="width:auto;text-align:right;">
+                                                    <a data-toggle="tooltip" title="Reblog?" href="{ReblogUrl}">⟳</a>    
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                
+                                    
+            
+                                    {block:PermalinkPage}
+                                        <div class="notes">
+                                            {block:PostNotes}
+                                                {PostNotes}
+                                            {/block:PostNotes}
+                                        </div>    
+                                    {/block:PermalinkPage}
+                                    <!--{block:NoRebloggedFrom}{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}{/block:NoRebloggedFrom} --> 
+                                </div>
+                            {/block:Date}
+                        
+                        </div>
+                    </div>    
+                {/block:Posts}
+                
+                <div class="nav">
+                {block:Pagination}
+                    <center>
+                        {block:PreviousPage}
+                            <a class="previous_page" href="{PreviousPage}">{lang:Previous}</a> 
+                        {/block:PreviousPage}
+                            {block:JumpPagination length="3"}
+                        {block:CurrentPage}
+                            <span class="current_page">{PageNumber}</span>
+                        {/block:CurrentPage}
+                        {block:JumpPage}
+                            <a class="jump_page" href="{URL}">{PageNumber}</a>
+                        {/block:JumpPage}
+                        {/block:JumpPagination}
+                        {block:NextPage}
+                            <a class="next_page" href="{NextPage}">{lang:Next}</a>
+                        {/block:NextPage}
+                    </center>
+                {/block:Pagination}
+            </div>
+                    </div>
+                    
+                    
+                </div>
+                
+            <div id="c">
+        <a href="https://cloverparty.tumblr.com/tagged/mine" data-toggle="tooltip" title="Theme by Mochizuki Hajime">★</a>
+    </div>    
+    </body>
+    </html>
