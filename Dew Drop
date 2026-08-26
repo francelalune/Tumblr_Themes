@@ -1,0 +1,824 @@
+    <!DOCTYPE HTML>
+    <head>
+    <meta charset="utf-8" />
+    <!--
+    
+    // 02 Dew Drop Tumblr theme by Cloverparty @ Windchime
+    // Theme Version 1.0
+    // 8.26.26
+    ✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻✻
+    
+    // Credit to glenthemes - blockquote, photo, audio JS 
+    
+    // For transparency, choose a number between 0 and 1. For example, 1 will make your posts a solid color, but 0.5 will be slightly translucent, and 0 will be transparent.
+    // The header is meant to be compact, so keep that in mind when editing. The header description will only fit 2 lines and the icon will resize to 130x130 if larger than that. This works best with smaller fonts. If you make your header too large, it will overflow and be hidden. 
+    
+    -->
+    
+    <!--*******************************
+                   Images
+    *******************************-->
+    <meta name="image:favicon" content="">    
+    <meta name="image:background" content="">
+    <meta name="image:header" content="https://files.catbox.moe/wivu1o.png">
+    <meta name="image:header icon" content="">
+    <meta name="image:cursor" content="https://files.catbox.moe/hwtgun.png">
+    <meta name="image:cursor hover" content="https://files.catbox.moe/03vbvr.png">
+    <meta name="image:post" content="">
+
+    
+    <!--*******************************
+                   Colors
+    *******************************-->
+    <meta name="color:background" content="">
+    <meta name="color:text" content="">
+    
+    <meta name="color:link" content="#1500ff">
+    <meta name="color:link background" content="">
+    <meta name="color:link hover" content="">
+    <meta name="color:link background hover" content="">    
+    <meta name="color:link border" content="">    
+    <meta name="color:link border hover" content="">    
+    <meta name="color:link shadow" content="">
+    <meta name="color:link shadow hover" content="">    
+    
+    <meta name="color:pagination" content="">    
+
+    
+    <meta name="color:header" content="#fff">
+    <meta name="color:header border" content="#000">
+    <meta name="color:icon border" content="#000">
+    
+    <meta name="color:post" content="#fff">
+    <meta name="color:post background" content="">
+    <meta name="color:post border" content="#000">
+    
+    <meta name="color:ask" content="#fff">
+    
+    <meta name="color:footer" content="">
+    <meta name="color:footer link" content="">
+    <meta name="color:footer link background" content="">
+    <meta name="color:footer link hover" content="">
+    <meta name="color:footer link background hover" content="">    
+    
+    <meta name="color:footer link shadow" content="">
+    <meta name="color:footer link shadow hover" content="">    
+    <meta name="color:footer link border" content="">
+    <meta name="color:footer link border hover" content="">    
+    
+    <meta name="color:scrollbar" content="">
+    <meta name="color:scrollbar track" content="">    
+    
+    <meta name="color:selection" content="">
+    <meta name="color:selection text" content="">    
+    <meta name="color:tooltip" content="">
+    <meta name="color:tooltip text" content="">      
+    
+    
+    <!--*******************************
+                   Text
+    *******************************-->
+    <meta name="text:font size" content="11">    
+    <meta name="text:title size" content="20">   
+    <meta name="text:title" content="title">
+    <meta name="text:description" content=""> 
+    <meta name="text:free space" content="">
+    
+    <meta name="text:link one" content="1">
+    <meta name="text:link one url" content="/">
+    <meta name="text:link two" content="2">
+    <meta name="text:link two url" content="/">
+    <meta name="text:link three" content="3">
+    <meta name="text:link three url" content="/">
+    <meta name="text:link divider" content="/">
+    
+    <meta name="text:post border radius" content="15">
+    <meta name="text:post transparency" content="0.5">
+    <meta name="text:header transparency" content="1">    
+    
+    <meta name="text:post border size" content="3">
+    <meta name="text:icon border size" content="3">
+    <meta name="text:header border size" content="3">
+    
+    
+    <!--*******************************
+                  Options
+    *******************************-->
+    <meta name="if:custom cursor" content="">
+    <meta name="if:full background" content="">
+    <meta name="if:custom scrollbar" content="">
+    <meta name="if:custom title" content="">
+    <meta name="if:saturated images" content="">    
+
+    <meta name="if:footer style 2" content="">
+    
+    <meta name="if:link background" content="">
+    <meta name="if:link underline" content="">   
+    <meta name="if:link border" content="">
+    <meta name="if:link shadow" content="">    
+    
+    <!--*******************************
+                  Select
+    *******************************-->    
+    <meta name="select:font family" content="arial">
+    <meta name="select:font family" content="times new roman">
+    <meta name="select:font family" content="short stack">
+    <meta name="select:font family" content="ms gothic">
+    <meta name="select:font family" content="roboto mono">
+    <meta name="select:font family" content="indie flower">
+    <meta name="select:font family" content="apricot">
+   
+    <meta name="select:post border" content="none">    
+    <meta name="select:post border" content="solid">
+    <meta name="select:post border" content="dashed">
+    <meta name="select:post border" content="double">
+    <meta name="select:post border" content="dotted">
+    <meta name="select:post border" content="ridge">
+    <meta name="select:post border" content="inset">
+    <meta name="select:post border" content="outset">
+    
+    <meta name="select:icon border" content="none">    
+    <meta name="select:icon border" content="solid">
+    <meta name="select:icon border" content="dashed">
+    <meta name="select:icon border" content="double">
+    <meta name="select:icon border" content="dotted">
+    <meta name="select:icon border" content="ridge">
+    <meta name="select:icon border" content="inset">
+    <meta name="select:icon border" content="outset">    
+    
+    <meta name="select:header border" content="none">    
+    <meta name="select:header border" content="solid">
+    <meta name="select:header border" content="dashed">
+    <meta name="select:header border" content="double">
+    <meta name="select:header border" content="dotted">
+    <meta name="select:header border" content="ridge">
+    <meta name="select:header border" content="inset">
+    <meta name="select:header border" content="outset">
+    
+    <meta name="select:link decoration" content="none">
+    <meta name="select:link decoration" content="underline">
+    <meta name="select:link decoration" content="wavy underline">
+    <meta name="select:link decoration" content="dotted underline">
+    <meta name="select:link decoration" content="dashed underline">
+
+    
+    <title>{Title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{image:favicon}">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="//glen-npf-2020.glitch.me/npf-override.css" rel="stylesheet">
+    <script src="//glen-npf-2020.glitch.me/npf-evenize.js"></script>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
+<script>
+							(function($){
+							$(document).ready(function(){
+							$("[title]").style_my_tooltips({
+							tip_follows_cursor: true,
+							tip_delay_time:100,
+							tip_fade_speed:300,
+							attribute:"title"
+							});
+							});
+							})(jQuery);
+</script>         
+    
+    <style type="text/css">    
+    
+    /*********************************
+              Document body
+    *********************************/
+    /* . . . . . . . . . . . . . . . */      
+    body{
+        background-color:{color:background};
+        background-image:url('{image:background}'); 
+        {block:iffullbackground} 
+        background-size: cover;
+        {/block:iffullbackground}        
+        font-family:{select:font family};        
+        color:{color:text};
+        font-size:{text:font size}px; 
+        {block:ifcustomcursor}
+        cursor:url("{image:cursor}"), default;
+        {/block:ifcustomcursor}        
+    }
+    /* . . . . . . . . . . . . . . . */    
+    a{
+        -webkit-transition: all ease 0.35s;
+        -moz-transition: all ease 0.35s;
+        transition: all ease 0.35s;  
+        color:{color:link};
+        text-decoration:none;
+        text-decoration:{select:link decoration};
+        {block:iflinkborders}
+        text-shadow: -1px 0  {color:link border}, 0 1px  {color:link border}, 1px 0  {color:link border}, 0 -1px  {color:link border};
+        {/block:iflinkborders}
+        {block:iflinkshadow}
+        text-shadow: 1px 1px 3px {color:link shadow}, 0 0 1em {color:link shadow}, 0 0 0.2em {color:link shadow};
+        {/block:iflinkshadow}        
+        {block:iflinkbackground}
+        background-color:transparent;
+        border-radius:3px;
+        padding-top:1px;
+        padding-bottom:1px;
+        display:inline;
+        width: 150px;
+        box-shadow: inset 0 0 0 0 transparent;
+        overflow: visible;
+        {/block:iflinkbackground}        
+    }
+    /* . . . . . . . . . . . . . . . */  
+    a:hover{
+        color:{color:link hover};
+        {block:iflinkbackground}
+        box-shadow: inset 0 50px 0 0 {color:link background hover};
+        {/block:iflinkbackground}
+        {block:ifcustomcursor}
+        cursor:url("{image:cursor hover}"), default;
+        {/block:ifcustomcursor}  
+        {block:iflinkborders}
+        text-shadow: -1px 0  {color:link border hover}, 0 1px  {color:link border hover}, 1px 0  {color:link border hover}, 0 -1px  {color:link border hover};
+        {/block:iflinkborders}
+        {block:iflinkshadow}
+        text-shadow: 1px 1px 3px {color:link shadow hover}, 0 0 1em {color:link shadow hover}, 0 0 0.2em {color:link shadow hover};
+        {/block:iflinkshadow}
+        
+    }
+    /* . . . . . . . . . . . . . . . */  
+    .npf_row {
+        margin: 0 !important;
+    }
+    /* . . . . . . . . . . . . . . . */   
+    blockquote{
+        border-left:1px solid {color:text};
+        padding-left:10px;
+        margin: 15px;
+    }
+    /* . . . . . . . . . . . . . . . */        
+    p{
+        margin:0 0 5px 0;
+        padding:0;
+    }
+    /* . . . . . . . . . . . . . . . */     
+    :root {
+        --NPF-Image-Spacing:4px;
+        --NPF-Bottom-Gap-From-Captions:1em;
+    }
+    /* . . . . . . . . . . . . . . . */        
+    #s-m-t-tooltip{
+	    max-width: 300px;
+	    z-index: 10;
+	    margin: 24px 14px 7px 12px;
+	    padding:8px;
+	    border-radius:3px;
+        background: {color:tooltip};
+	    color: {color:tooltip text};
+	    box-shadow: 0px 0px 5px 5px {color:tooltip};
+    }    
+    /* . . . . . . . . . . . . . . . */ 
+    ::selection{ 
+        color:{color:selection text};
+        background-color:{color:selection};
+    }    
+    /* . . . . . . . . . . . . . . . */                
+    @font-face {
+        font-family: 'short stack';
+        src:url(https://files.catbox.moe/k0j0uw.ttf);
+    }    
+    /* . . . . . . . . . . . . . . . */                    
+    @font-face{
+        font-family: 'roboto mono';
+        src: url(https://files.catbox.moe/583egg.ttf);
+    }  
+    /* . . . . . . . . . . . . . . . */
+    @font-face{
+        font-family: 'indie flower';
+        src: url(https://files.catbox.moe/s1blqt.ttf);
+    }
+    /* . . . . . . . . . . . . . . . */     
+    @font-face {
+        font-family: 'Apricot';
+        src:url(https://files.catbox.moe/bk6rk8.ttf);
+    }    
+    /* . . . . . . . . . . . . . . . */         
+    {block:ifcustomscrollbar}
+     ::-webkit-scrollbar {
+        width: 15px;
+        height: 10px;
+     }
+    /* . . . . . . . . . . . . . . . */   
+    ::-webkit-scrollbar-thumb:vertical{
+        background:{color:scrollbar};
+        border-top: 1px solid #bdbdbd;
+        border-left: 1px solid #bdbdbd;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    /* . . . . . . . . . . . . . . . */
+    ::-webkit-scrollbar-track {
+        background:{color:scrollbar track};
+    }
+    /* . . . . . . . . . . . . . . . */
+    ::-webkit-scrollbar-button:vertical:increment {
+        background-image: url('https://64.media.tumblr.com/e09634612068e4130ba031c281d24f52/2672484062507eca-ca/s75x75_c1/adda254826b4ce41c01fc40698385bc334f10abf.png');
+        width: 14px;
+        height: 16px;
+        background-color:{color:scrollbar};
+        border-top: 1px solid #bdbdbd;
+        border-left: 1px solid #bdbdbd;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    /* . . . . . . . . . . . . . . . */
+    ::-webkit-scrollbar-button:vertical:decrement {
+        background-image:url(https://64.media.tumblr.com/30f5701150586e1f03bb59f783884ca7/2672484062507eca-56/s75x75_c1/8dc29751305312d2db13c18b6f0c9d8b105d2fd5.png);
+        background-color:{color:scrollbar};
+        border-top: 1px solid #bdbdbd;
+        border-left: 1px solid #bdbdbd;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        width: 14px;
+        height: 16px;
+    }
+    {/block:ifcustomscrollbar}    
+    
+    /*********************************
+                  Header
+    *********************************/  
+    
+    #header{ 
+        border-bottom:5px ridge white;
+        padding: 5px;  
+        background-color:rgba({RGBcolor:header}, {text:header transparency});
+        background-image:url('{image:header}');
+        max-height:220px;
+        height:220px;
+        position:fixed;
+        left:0px;
+        width: 100%;
+        margin-top:-10px;
+        overflow:hidden;
+    }    
+    
+    /*********************************
+                  Content
+    *********************************/     
+    /* . . . . . . . . . . . . . . . */            
+    #content{/*SIZE POSITION*/
+        width:350px;
+        position:absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /* . . . . . . . . . . . . . . . */        
+    #content-container{
+        height:400px;
+        overflow:scroll;
+        width:100%;
+        left:0px;
+        position:fixed;
+        bottom:0px;
+    }  
+    /* . . . . . . . . . . . . . . . */           
+    .post{ /*STYLE*/
+        background-color:rgba({RGBcolor:post}, {text:post transparency});
+        background-image:url('{image:post}');
+        padding:10px;
+        border:{text:post border size}px {color:post border} {select:post border};
+        border-radius:{text:post border radius}px;
+        margin:25px 0 40px 0;        
+    }
+    
+    /*********************************
+                   Parts
+    *********************************/  
+    /* . . . . . . . . . . . . . . . */          
+    .header-icon img{
+        max-width:130px;
+        max-height:130px;
+        height:100%;
+        display:block;
+        border:{text:icon border size}px {color:icon border} {select:icon border};
+    }
+    /* . . . . . . . . . . . . . . . */      
+    .description{
+        margin:10px 0 5px 0;
+        width:350px;
+        max-height:25px;
+        overflow:hidden;
+    }    
+    /* . . . . . . . . . . . . . . . */      
+    video{ 
+        max-width: 100%; 
+        height: auto;
+    } 
+    /* . . . . . . . . . . . . . . . */  
+    p{
+        margin:15px 0 15px 0;
+    }    
+    /* . . . . . . . . . . . . . . . */     
+    .post img{
+        max-width: 100%; 
+        height: auto;
+        border-radius:10px;
+        {block:ifsaturatedimages}
+        filter: saturate(50%);
+        transition: .45s ease-in-out;
+        {/block:ifsaturatedimages}
+    }
+    /* . . . . . . . . . . . . . . . */     
+    .post img:hover{
+        {block:ifsaturatedimages}
+        filter: saturate(1);
+        {/block:ifsaturatedimages}
+    }   
+    /* . . . . . . . . . . . . . . . */     
+    .footer01{ /*DATENOTES*/
+        background-color:{color:footer};
+        border-radius:5px;
+        border:1px solid #a5abd1;
+        margin:10px 0 0 0;
+        padding:2px;
+    }
+    /* . . . . . . . . . . . . . . . */     
+    .footer02{ /*TAGS*/
+        background-color:{color:footer};
+        border-radius:5px;
+        border:1px solid #a5abd1;
+        margin:5px 0 0 0;
+        padding:2px;
+    }   
+    /* . . . . . . . . . . . . . . . */         
+    .footer a{
+        color:{color:footer link};
+        {block:iflinkbackground}
+        background-color:transparent;
+        box-shadow: inset 0 0 0 0 transparent;
+        {/block:iflinkbackground}
+    }
+    /* . . . . . . . . . . . . . . . */  
+    .footer a:hover{
+        color:{color:footer link hover};
+        {block:iflinkbackground}
+        box-shadow: inset 0 0 0 0 transparent;
+        {/block:iflinkbackground}
+    }    
+    /* . . . . . . . . . . . . . . . */         
+    ol.notes{
+        list-style-type:none;
+        text-align:left;
+        padding:3px;
+        overflow:auto;
+    }  
+    /* . . . . . . . . . . . . . . . */             
+    .question{
+        background:transparent;
+    }    
+    /* . . . . . . . . . . . . . . . */        
+    .bubble {
+        position: relative;
+        margin-left:20px;
+        width:98%;     
+        background:{color:ask};
+        padding:10px;
+        border-radius: 10px;
+        margin-top:5px;
+    }    
+    /* . . . . . . . . . . . . . . . */        
+    .bubble:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        z-index: 1;
+        border-style: solid;
+        border-color: transparent {color:ask};
+        border-width: 20px 20px 20px 0;
+        top: 50%;
+        left: -20px;
+        margin-top: -20px;
+    }    
+    /* . . . . . . . . . . . . . . . */       
+    .asker{
+        margin:0 0 5px 0;
+    }    
+    .title{
+        font-weight:bold;
+        font-size:20px;
+    }
+    .playbutton {
+        position:fixed;
+        margin-left:20px;
+        margin-top:20px;
+        border-radius:100%;
+        opacity: 0.7;
+        z-index:9;    
+        width:33px;
+        height:30px;
+        overflow:hidden;}   
+    
+    /*********************************
+                   Other
+    *********************************/  
+    /* . . . . . . . . . . . . . . . */     
+    #c{
+        bottom:5px;
+        left:15px;
+        font-size:25px;
+        font-weight:bold;
+        position:fixed;
+    }    
+    /* . . . . . . . . . . . . . . . */             
+    .nav a{
+        color:{color:pagination};
+    }
+    /* . . . . . . . . . . . . . . . */
+    #free-space{
+        text-align:center;
+        width:700px;
+        max-width:700px;
+        padding:5px;
+        left:0px;
+        margin:0 0 10px 0;
+        transform: translateX(-25%);
+    }
+    /* . . . . . . . . . . . . . . . */
+    
+    {CustomCss}
+    </style>
+    </head>
+        <body>  
+            <div id="header">
+                <center>
+                    <div style="font-size:{text:title size}px;margin:0 0 10px 0"><a href="/">{block:ifcustomtitle}{text:title}{/block:ifcustomtitle}{block:ifnotcustomtitle}{Title}{/block:ifnotcustomtitle}</a></div>
+                        <div class="header-icon"><a href="/"><img data-toggle="tooltip" title="{Title}" src="{image:header icon}"></a>
+                        
+                        <div class="description"> 
+                            {text:description}
+                        </div>    
+                <a href="{text:link one url}">{text:link one}</a> 
+                {text:link divider} 
+                <a href="{text:link two url}">{text:link two}</a> 
+                {text:link divider} 
+                <a href="{text:link three url}">{text:link three}</a>
+                        
+                </center>
+            </div>
+            
+                    <div id="content-container">
+                        <div id="content">
+                            {block:Posts} 
+                                <div class="post">
+                                    <div class="posts" post-type="{PostType}">
+                        
+                            <!-- -- -- Images -- -- -->
+ 
+                            {block:Photo}
+                                <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                                {block:Caption}
+                                    {Caption}
+                                {/block:Caption}
+                            {/block:Photo}
+                                
+                            {block:Photoset}
+                            <div class="media">{Photoset}</div>
+                                {block:Caption}
+                                    <div class="caption">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            {/block:Photoset}
+                            
+                            <!-- -- -- text posts -- -- -->
+ 
+                            {block:Text}
+                                {block:Title}
+                                    <div class="title">{Title}</div>
+                                {/block:Title}
+                                {Body}
+                            {/block:Text}
+                            
+                            {block:Chat}
+                                {block:Title}
+                                    <div class="title">
+                                        <h3><a href="{Permalink}">{Title}</a></h3></div>
+                                {/block:Title}
+                                {block:Lines}
+                                    <div class="{Alt} user_{UserNumber}">
+                                        {block:Label}
+                                            <span class="label">{Label}</span>
+                                        {/block:Label}
+                                        {Line}
+                                    </div>
+                                {/block:Lines}
+                            {/block:Chat}
+ 
+                            {block:Quote}
+                                <div class="quote">
+                                    "{Quote}"
+                                {block:Source}
+                                    <div class="source">
+                                        - <i>{Source}</i>
+                                    </div>
+                                {/block:Source}
+                                </div>
+                            {/block:Quote}    
+ 
+                            {block:Link}
+                                <a href="{URL}" class="link" {Target}>
+                                    {Name}
+                                </a>
+                                
+                                {block:Description}
+                                    {Description}
+                                {/block:Description}
+                            {/block:Link}
+                            
+                            <!-- -- -- audio & video -- -- -->
+ 
+                            {block:Video}
+                                {Video-500}
+                                {block:Caption}
+                                    {Caption}
+                                {/block:Caption}
+                            {/block:Video}
+ 
+                            {block:Audio}
+                                <div class="playbutton">{AudioPlayer}</div>
+                                <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            {block:AlbumArt}
+                                    <div id="albumart">
+                                        <img src="{AlbumArtURL}" width="100">  
+                                    </div>
+                                {/block:AlbumArt}
+                                        </td>
+                                        <td>
+                                           <div class="trackstuff">
+                                        {block:TrackName}
+                                            <b><i>{TrackName}</i></b>
+                                        {/block:TrackName}
+                                        <br>{block:Artist}
+                                            <i>{Artist}</i>
+                                        {/block:Artist}
+                                    </div> 
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                                {Caption}
+                            {/block:Audio} 
+                            
+                            
+                            
+                            
+ 
+                            {block:Answer}
+                                <div class="question">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                   <img src="{AskerPortraitURL-64}" style="display:block;border-radius:100%;">
+                                                </td>                    
+                                                <td style="width:76%"><div class="bubble">
+                                                    <div class="asker">{Asker} said:</div>  
+                                                        {Question}
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="caption">
+                                    {Answer}
+                                </div>
+                            {/block:Answer}
+                            
+                            <!-- -- -- Footer -- -- -->
+
+                            
+                            {block:Date}
+                                <div class="footer">
+                                    <div class="footer01">
+                                    <table style="width:100%;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:33%;">
+                                                    <a data-toggle="tooltip" title="{ShortMonth} {DayOfMonthWithZero}, {12HourWithZero}:{Minutes} {CapitalAmPm}" href="{Permalink}">  
+                                                       {TimeAgo}
+                                                    </a>  
+                                                </td>
+                                                <td style="width:33%;text-align:right;">
+                                                    
+                                                    <a data-toggle="tooltip" title="{NoteCountWithLabel}" href="{Permalink}">  
+                                                        {block:NoteCount}
+                                                            {NoteCount}
+                                                        {/block:NoteCount}
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>    
+                                    
+                                    {block:iffooterstyle2}
+                                {block:HasTags}
+                                
+                                <hr style="border-bottom:1px dashed {color:footer text};border-top:none;margin:5px;width:97%;">
+                                
+                                    <table style="width:100%;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:auto;">
+                                        <div class="tags" style="text-align:left;"><text style="color:{color:footer link}">
+                                            {block:Tags}
+                                                +</text><a data-toggle="tooltip" title="#{Tag}" href="{TagURL}">{Tag}</a>
+                                            {/block:Tags}
+                                        </div>    
+                                                </td>
+                            
+                                                
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                                    {/block:HasTags}
+                                {/block:iffooterstyle2}
+                                    
+                                </div>    
+                                
+                                {block:ifnotfooterstyle2}
+
+                                {block:HasTags}
+                                <div class="footer02">    
+                                    <table style="width:100%;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:auto;">
+
+                                                   
+                                                   
+                                        <div class="tags" style="text-align:left;"><text style="color:{color:footer link}">
+                                            {block:Tags}
+                                                +</text><a data-toggle="tooltip" title="#{Tag}" href="{TagURL}">{Tag}</a>
+                                            {/block:Tags}
+                                        </div>    
+                                                </td>
+                            
+                                                
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>    
+                                {/block:HasTags} 
+                                {/block:ifnotfooterstyle2}
+                                
+                                    {block:PermalinkPage}
+                                        <div class="notes">
+                                            {block:PostNotes}
+                                                {PostNotes}
+                                            {/block:PostNotes}
+                                        </div>    
+                                    {/block:PermalinkPage}
+                                    <!--{block:NoRebloggedFrom}{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}{/block:NoRebloggedFrom} --> 
+                                </div>
+                            {/block:Date}
+                        
+                        </div>
+                            </div>     
+                            {/block:Posts}
+                            
+                            <div id="free-space">
+                                {text:free space}
+                            </div>
+                            
+                        </div>  
+                        
+                        <div class="nav">
+                            {block:Pagination}
+                                <center>
+                                    <div style="width:180px;position:fixed;bottom:11px;right:15px;font-size:25px;">
+                                        {block:PreviousPage}
+                                            <a href="{PreviousPage}">&#10094; {lang:Previous}</a> 
+                                        {/block:PreviousPage}
+                                        <br>
+                                        {block:NextPage}
+                                            <a href="{NextPage}">{lang:Next} &#10095;</a>
+                                        {/block:NextPage}
+                                    </div>    
+                                </center>
+                            {/block:Pagination}
+                        </div>
+               <div id="c"><a href="https://cloverparty.tumblr.com/tagged/mine" data-toggle="tooltip" title="Theme by Mochizuki Hajime" style="text-decoration:none;font-family:apricot;text-shadow: -2px 0  white, 0 2px  white, 2px 0  white, 0 -2px  white;">★</a></div>       
+                        
+                    </div>    
+            
+              
+            
+        </body>
+    </html>    
