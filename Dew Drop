@@ -350,7 +350,7 @@
     *********************************/  
     
     #header{ 
-        border-bottom:5px ridge white;
+        border-bottom:{text:header border size}px {select:header border} {color:header border};
         padding: 5px;  
         background-color:rgba({RGBcolor:header}, {text:header transparency});
         background-image:url('{image:header}');
